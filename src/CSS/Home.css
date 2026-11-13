@@ -1,0 +1,311 @@
+/* ==========================================================================
+   Home.css - Navigation Bar Styling
+   Pixel-perfect recreation of the premium developer portfolio navigation bar
+   ========================================================================== */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #F0F1F5;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.02);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.25s ease;
+}
+
+.headerScrolled {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Left Section - Brand Identity
+   -------------------------------------------------------------------------- */
+.brandWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.logoSvg {
+  display: block;
+  width: 48px;
+  height: 38px;
+}
+
+.divider {
+  width: 1px;
+  height: 28px;
+  background-color: #E2E8F0;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #17213B;
+  letter-spacing: -0.015em;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.brandWrapper:hover .brandName {
+  color: #2457F5;
+}
+
+/* --------------------------------------------------------------------------
+   Center Section - Navigation Links
+   -------------------------------------------------------------------------- */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.navLink {
+  position: relative;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111827;
+  text-decoration: none;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  color: #2457F5;
+}
+
+.navLinkActive {
+  color: #2457F5;
+  font-weight: 600;
+}
+
+/* Active navigation blue underline */
+.activeUnderline {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background-color: #2457F5;
+  border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Right Section - CTA Button
+   -------------------------------------------------------------------------- */
+.ctaWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  background-color: #102D75;
+  color: #FFFFFF;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 12px 0 rgba(16, 45, 117, 0.2);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.ctaButton:hover {
+  background-color: #163B96;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px 0 rgba(16, 45, 117, 0.3);
+}
+
+.ctaButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px 0 rgba(16, 45, 117, 0.15);
+}
+
+.ctaSendIcon {
+  width: 14px;
+  height: 14px;
+  transform: rotate(-10deg);
+}
+
+.ctaArrowIcon {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.ctaButton:hover .ctaArrowIcon {
+  transform: translate(1px, -1px);
+}
+
+/* --------------------------------------------------------------------------
+   Mobile & Responsive Controls
+   -------------------------------------------------------------------------- */
+.mobileMenuToggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 8px;
+  color: #17213B;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.mobileMenuToggle:hover {
+  background-color: #F8FAFC;
+}
+
+.mobileDropdown {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .navLinks {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 868px) {
+  .navLinks {
+    display: none;
+  }
+
+  .ctaWrapper {
+    display: none;
+  }
+
+  .mobileMenuToggle {
+    display: flex;
+  }
+
+  .mobileDropdown {
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #F0F1F5;
+    box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.08);
+    padding: 16px 24px 24px;
+    z-index: 49;
+    animation: slideDown 0.22s ease-out forwards;
+  }
+
+  .mobileNavLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .mobileNavLink {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #111827;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .mobileNavLink:hover {
+    background-color: #F8FAFC;
+    color: #2457F5;
+  }
+
+  .mobileNavLinkActive {
+    color: #2457F5;
+    background-color: #EFF6FF;
+    font-weight: 600;
+  }
+
+  .mobileCtaButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #102D75;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px 0 rgba(16, 45, 117, 0.2);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .brandName {
+    font-size: 16px;
+  }
+
+  .divider {
+    margin: 0 10px;
+  }
+
+  .logoSvg {
+    width: 40px;
+    height: 32px;
+  }
+}
