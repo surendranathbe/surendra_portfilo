@@ -10,47 +10,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(165deg, #FFFFFF 0%, #F8FAFD 45%, #F0F5FE 100%);
+  background-color: #F8FAFD;
   overflow: hidden;
   padding: 40px 0 60px;
 }
 
-/* Ambient Radial Glows in Background */
-.ambientGlowRight {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  width: 650px;
-  height: 650px;
-  background: radial-gradient(circle, rgba(147, 197, 253, 0.22) 0%, rgba(199, 210, 254, 0.12) 45%, transparent 70%);
-  border-radius: 50%;
-  filter: blur(60px);
-  pointer-events: none;
-  z-index: 1;
-}
-
-.ambientGlowLeft {
-  position: absolute;
-  bottom: 5%;
-  left: 2%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
-  border-radius: 50%;
-  filter: blur(50px);
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Background Geometric Hexagonal Wireframe Lines */
-.bgGeometricSvg {
+/* Background Banner Graphic Container */
+.bgImageContainer {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
   z-index: 1;
-  opacity: 0.6;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
 }
 
 /* Central Content Container: 1300px max-width, 2-column balanced grid */

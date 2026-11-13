@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { ArrowUpRight, Code2, Layout, Globe } from 'lucide-react'
 import profileImage from '../assets/profile_banner.png'
+import bannerBg from '../assets/banner_bg.png'
 import styles from '../CSS/HeroBanner.module.css'
 
 // SVGs for the 6 Tech Stack Badges
@@ -148,18 +149,14 @@ export default function HeroBanner() {
 
   return (
     <section id="home" className={styles.heroSection}>
-      {/* Background Ambient Radial Glows */}
-      <div className={styles.ambientGlowRight} />
-      <div className={styles.ambientGlowLeft} />
-
-      {/* Background Tech Geometric Circuit Lines */}
-      <svg className={styles.bgGeometricSvg} viewBox="0 0 1440 800" fill="none">
-        <polygon points="120,400 160,330 240,330 280,400 240,470 160,470" stroke="#E0E7FF" strokeWidth="1" strokeDasharray="4 4" />
-        <polygon points="60,250 90,200 150,200 180,250 150,300 90,300" stroke="#EEF2FF" strokeWidth="1" />
-        <polygon points="1300,600 1340,530 1420,530 1460,600 1420,670 1340,670" stroke="#E0E7FF" strokeWidth="1" strokeDasharray="4 4" />
-        <path d="M 0,220 L 300,220 L 380,300" stroke="#EEF2FF" strokeWidth="1.5" />
-        <path d="M 1100,700 L 1300,700 L 1440,600" stroke="#EEF2FF" strokeWidth="1.5" />
-      </svg>
+      {/* Background Banner Graphic */}
+      <div className={styles.bgImageContainer}>
+        <img
+          src={bannerBg}
+          alt="Portfolio Banner Background"
+          className={styles.bgImage}
+        />
+      </div>
 
       <div className={styles.heroContainer}>
         {/* ==================================================================
