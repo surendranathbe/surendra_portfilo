@@ -309,3 +309,922 @@
     height: 32px;
   }
 }
+
+/* ==========================================================================
+   Footer Section - Ultra Premium Luxury Navy Styling
+   ========================================================================== */
+.footerSection {
+  background-color: #0A1128;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle Ambient Glow Behind Footer */
+.footerSection::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -50px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+.footerSection::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -50px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(121, 40, 202, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(50px);
+}
+
+.footerTopContainer {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 70px 24px 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.85fr 1fr 1.35fr;
+  gap: 48px;
+}
+
+/* --------------------------------------------------------------------------
+   Column 1: Left Brand & 5-Line Justified Content
+   -------------------------------------------------------------------------- */
+.footerBrandCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footerBrandHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.footerLogoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.footerLogoSvg {
+  display: block;
+  width: 48px;
+  height: 38px;
+  filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.4));
+}
+
+.footerBrandDivider {
+  width: 1px;
+  height: 26px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.footerBrandName {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.footerBioContent {
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #94A3B8;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  max-width: 390px;
+  margin: 0 0 22px 0;
+}
+
+.footerStatusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #CBD5E1;
+}
+
+.footerStatusDot {
+  width: 7px;
+  height: 7px;
+  background-color: #10B981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+  animation: pulseGreen 2s infinite ease-in-out;
+}
+
+/* --------------------------------------------------------------------------
+   Columns 2 & 3: Navigation & Services Lists
+   -------------------------------------------------------------------------- */
+.footerLinksCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerColTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 22px 0;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footerColTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 2.5px;
+  background: #2563EB;
+  border-radius: 2px;
+}
+
+.footerNavList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerNavLink {
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  color: #94A3B8;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.footerNavLink:hover {
+  color: #38BDF8;
+  transform: translateX(5px);
+}
+
+.footerServiceItem {
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  color: #94A3B8;
+  transition: color 0.2s ease;
+  display: block;
+}
+
+.footerServiceItem:hover {
+  color: #F1F5F9;
+}
+
+/* --------------------------------------------------------------------------
+   Column 4: Contact Details (Clickable Cards with Smooth Hover)
+   -------------------------------------------------------------------------- */
+.footerContactCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerContactList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerContactCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.footerContactIconBox {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.whatsappIconBox {
+  color: #25D366;
+  background: rgba(37, 211, 102, 0.12);
+}
+
+.gmailIconBox {
+  color: #EA4335;
+  background: rgba(234, 67, 53, 0.12);
+}
+
+.linkedinIconBox {
+  color: #0A66C2;
+  background: rgba(10, 102, 194, 0.12);
+}
+
+.footerContactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.footerContactType {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.footerContactValue {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #F1F5F9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.footerCardArrow {
+  color: #64748B;
+  transition: transform 0.25s ease, color 0.25s ease;
+  flex-shrink: 0;
+}
+
+/* Card Hover Interactions */
+.footerContactCard:hover {
+  transform: translateY(-2.5px);
+}
+
+.footerContactCard:hover .footerCardArrow {
+  transform: translate(2px, -2px);
+  color: #FFFFFF;
+}
+
+.footerContactCard:hover .footerContactIconBox {
+  transform: scale(1.08);
+}
+
+/* WhatsApp Hover */
+.footerWhatsappCard:hover {
+  background: rgba(37, 211, 102, 0.08);
+  border-color: rgba(37, 211, 102, 0.4);
+  box-shadow: 0 8px 22px -4px rgba(37, 211, 102, 0.18);
+}
+
+.footerWhatsappCard:hover .footerContactValue {
+  color: #25D366;
+}
+
+/* Gmail Hover */
+.footerGmailCard:hover {
+  background: rgba(234, 67, 53, 0.08);
+  border-color: rgba(234, 67, 53, 0.4);
+  box-shadow: 0 8px 22px -4px rgba(234, 67, 53, 0.18);
+}
+
+.footerGmailCard:hover .footerContactValue {
+  color: #F87171;
+}
+
+/* LinkedIn Hover */
+.footerLinkedinCard:hover {
+  background: rgba(10, 102, 194, 0.08);
+  border-color: rgba(10, 102, 194, 0.4);
+  box-shadow: 0 8px 22px -4px rgba(10, 102, 194, 0.18);
+}
+
+.footerLinkedinCard:hover .footerContactValue {
+  color: #60A5FA;
+}
+
+/* --------------------------------------------------------------------------
+   Footer Bottom Bar
+   -------------------------------------------------------------------------- */
+.footerBottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.18);
+  padding: 22px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.footerBottomContainer {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerCopyright {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  color: #64748B;
+  margin: 0;
+}
+
+.footerBackToTop {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #94A3B8;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.footerBackToTop:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Footer Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footerTopContainer {
+    padding: 50px 20px 40px;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footerBioContent {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .footerBottomContainer {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   About Section - Interactive 4-Tabs & Content Styling
+   ========================================================================== */
+.aboutSection {
+  padding: 38px 0 42px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFD 50%, #F1F5FE 100%);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #F0F1F5;
+  scroll-margin-top: 80px;
+}
+
+.aboutSection::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+.aboutSection::after {
+  content: '';
+  position: absolute;
+  bottom: 5%;
+  left: -5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.04) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(50px);
+}
+
+.aboutContainer {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Header - Clean, Ultra-Premium "About Me" Heading */
+.aboutSectionHeader {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.aboutMainTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.aboutTitleDark {
+  color: #0F172A;
+}
+
+.aboutTitleGrad {
+  background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aboutTitleBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.aboutTitleLine {
+  width: 32px;
+  height: 3px;
+  background: linear-gradient(90deg, #2563EB, #7C3AED);
+  border-radius: 3px;
+}
+
+.aboutTitleDot {
+  width: 7px;
+  height: 7px;
+  background-color: #2563EB;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
+}
+
+/* Two-Column Layout Grid with Symmetrical Height Alignment */
+.aboutLayoutGrid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* --------------------------------------------------------------------------
+   Left Column: 4 Tabs (Equal Height & Direct Visual Connection)
+   -------------------------------------------------------------------------- */
+.aboutTabsList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 10px;
+}
+
+.aboutTabBtn {
+  flex: 1;
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  background-color: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.02);
+}
+
+.aboutTabBtn:hover {
+  border-color: #93C5FD;
+  transform: translateX(4px);
+  box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.1);
+}
+
+.aboutTabBtnActive {
+  background: linear-gradient(#EFF6FF, #EFF6FF) padding-box,
+              linear-gradient(135deg, #2563EB 0%, #4F46E5 100%) border-box;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 25px -4px rgba(37, 99, 235, 0.18);
+  transform: translateX(6px);
+}
+
+.aboutTabBtnActive::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #2563EB 0%, #4F46E5 100%);
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+/* Protruding Pointer Indicator connecting to Right Card */
+@media (min-width: 1025px) {
+  .aboutTabBtnActive::after {
+    content: '';
+    position: absolute;
+    right: -7px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background: #EFF6FF;
+    border-top: 2px solid #2563EB;
+    border-right: 2px solid #2563EB;
+    z-index: 4;
+  }
+}
+
+.aboutTabIconBox {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  color: #475569;
+  transition: all 0.25s ease;
+}
+
+.aboutTabBtnActive .aboutTabIconBox {
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+  color: #FFFFFF;
+  border-color: #2563EB;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.aboutTabInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.aboutTabTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #1E293B;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease;
+}
+
+.aboutTabBtnActive .aboutTabTitle {
+  color: #1D4ED8;
+  font-weight: 700;
+}
+
+.aboutTabSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #64748B;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease;
+}
+
+.aboutTabBtnActive .aboutTabSubtitle {
+  color: #3B82F6;
+}
+
+.aboutTabArrow {
+  color: #94A3B8;
+  transition: transform 0.25s ease, color 0.25s ease;
+  flex-shrink: 0;
+}
+
+.aboutTabBtnActive .aboutTabArrow {
+  color: #2563EB;
+  transform: translateX(3px);
+}
+
+/* --------------------------------------------------------------------------
+   Right Column: Dynamic Content Card with Neat Glowing Gradient Border Effect
+   -------------------------------------------------------------------------- */
+.aboutContentWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.aboutContentCard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px 28px;
+  border: 2px solid transparent;
+  background: linear-gradient(#FFFFFF, #FFFFFF) padding-box,
+              linear-gradient(135deg, #2563EB 0%, #4F46E5 35%, #7C3AED 70%, #06B6D4 100%) border-box;
+  border-radius: 18px;
+  box-shadow: 0 16px 45px -8px rgba(37, 99, 235, 0.12),
+              0 0 25px rgba(79, 70, 229, 0.05);
+  animation: fadeInCard 0.35s ease-out forwards;
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aboutCardTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutCardBadgeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.aboutCardActiveIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 12px;
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1E293B;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.aboutCardActiveDot {
+  width: 7px;
+  height: 7px;
+  background-color: #2563EB;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+.aboutCardBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background-color: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2563EB;
+}
+
+.aboutCardMainHeading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+.aboutCardTagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #4F46E5;
+  margin: 0 0 10px 0;
+}
+
+.aboutCardDescription {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.58;
+  color: #475569;
+  margin: 0 0 14px 0;
+}
+
+.aboutHighlightsSection {
+  margin-bottom: 14px;
+}
+
+.aboutHighlightsTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #1E293B;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 8px 0;
+}
+
+.aboutHighlightsList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.aboutHighlightItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.aboutCheckIcon {
+  color: #10B981;
+  flex-shrink: 0;
+  margin-top: 1.5px;
+}
+
+/* Card Bottom Footer: Tags */
+.aboutCardFooter {
+  border-top: 1px solid #F1F5F9;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aboutTagsLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #64748B;
+}
+
+.aboutTagsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.aboutSkillPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.aboutSkillPill:hover {
+  background-color: #EFF6FF;
+  border-color: #93C5FD;
+  color: #2563EB;
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   About Section Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .aboutLayoutGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .aboutTabsList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .aboutTabBtnActive {
+    transform: none;
+  }
+
+  .aboutTabBtn:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 640px) {
+  .aboutSection {
+    padding: 30px 0 35px;
+  }
+
+  .aboutContainer {
+    padding: 0 16px;
+  }
+
+  .aboutMainTitle {
+    font-size: 26px;
+  }
+
+  .aboutTabsList {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .aboutContentCard {
+    padding: 18px 16px;
+  }
+
+  .aboutCardBadgeRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .aboutCardMainHeading {
+    font-size: 20px;
+  }
+
+  .aboutCardTagline {
+    font-size: 13px;
+  }
+
+  .aboutCardDescription {
+    font-size: 13px;
+  }
+
+  .aboutHighlightItem {
+    font-size: 12.5px;
+  }
+}
