@@ -125,17 +125,17 @@ export default function HeroBanner() {
         setTypingSpeed(90)
 
         if (displayedText.length + 1 === currentRole.length) {
-          setTimeout(() => setIsDeleting(true), 2100)
+          setTimeout(() => setIsDeleting(true), 2200)
           return
         }
       } else {
         setDisplayedText(currentRole.substring(0, displayedText.length - 1))
         setTypingSpeed(45)
 
-        if (displayedText.length === 0) {
+        if (displayedText.length <= 1) {
           setIsDeleting(false)
           setRoleIndex((prev) => (prev + 1) % typingRoles.length)
-          setTypingSpeed(300)
+          setTypingSpeed(220)
           return
         }
       }
@@ -236,11 +236,8 @@ export default function HeroBanner() {
             ================================================================== */}
         <div className={styles.rightColumn}>
           <div className={styles.orbitStage}>
-            {/* Background Outer Neon Circular Ring */}
-            <div className={styles.outerNeonRing} />
-
             {/* Connecting Circuit Trace Lines with Junction Nodes */}
-            <svg className={styles.circuitLinesSvg} viewBox="0 0 540 500">
+            <svg className={styles.circuitLinesSvg} viewBox="0 0 580 520">
               <defs>
                 <linearGradient id="circuitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#C7D2FE" stopOpacity="0.85" />
@@ -248,33 +245,29 @@ export default function HeroBanner() {
                 </linearGradient>
               </defs>
 
-              {/* Node 1: React to Outer Ring */}
-              <line x1="100" y1="50" x2="155" y2="115" stroke="url(#circuitGrad)" strokeWidth="1.5" strokeDasharray="3 3" />
-              <circle cx="100" cy="50" r="3.5" fill="#818CF8" />
+              {/* Node 1: React to Profile Ring */}
+              <line x1="97" y1="55" x2="145" y2="115" stroke="url(#circuitGrad)" strokeWidth="1.5" strokeDasharray="3 3" />
+              <circle cx="97" cy="55" r="3.5" fill="#818CF8" />
 
-              {/* Node 2: Java to Outer Ring */}
-              <line x1="440" y1="50" x2="385" y2="115" stroke="url(#circuitGrad)" strokeWidth="1.5" strokeDasharray="3 3" />
-              <circle cx="440" cy="50" r="3.5" fill="#818CF8" />
+              {/* Node 2: Java to Profile Ring */}
+              <line x1="483" y1="55" x2="435" y2="115" stroke="url(#circuitGrad)" strokeWidth="1.5" strokeDasharray="3 3" />
+              <circle cx="483" cy="55" r="3.5" fill="#818CF8" />
 
-              {/* Node 3: Code to Outer Ring & Branching Line */}
-              <line x1="30" y1="250" x2="110" y2="250" stroke="url(#circuitGrad)" strokeWidth="1.5" strokeDasharray="3 3" />
-              <line x1="30" y1="250" x2="15" y2="330" stroke="url(#circuitGrad)" strokeWidth="1.2" strokeDasharray="3 3" />
-              <circle cx="30" cy="250" r="3.5" fill="#818CF8" />
-              <circle cx="15" cy="330" r="3" fill="#818CF8" />
+              {/* Node 3: Code to Profile Ring */}
+              <line x1="30" y1="260" x2="80" y2="260" stroke="url(#circuitGrad)" strokeWidth="1.5" strokeDasharray="3 3" />
+              <circle cx="30" cy="260" r="3.5" fill="#818CF8" />
 
-              {/* Node 4: MongoDB to Outer Ring & Branching Line */}
-              <line x1="510" y1="250" x2="430" y2="250" stroke="url(#circuitGrad)" strokeWidth="1.5" strokeDasharray="3 3" />
-              <line x1="510" y1="250" x2="525" y2="330" stroke="url(#circuitGrad)" strokeWidth="1.2" strokeDasharray="3 3" />
-              <circle cx="510" cy="250" r="3.5" fill="#818CF8" />
-              <circle cx="525" cy="330" r="3" fill="#818CF8" />
+              {/* Node 4: MongoDB to Profile Ring */}
+              <line x1="550" y1="260" x2="500" y2="260" stroke="url(#circuitGrad)" strokeWidth="1.5" strokeDasharray="3 3" />
+              <circle cx="550" cy="260" r="3.5" fill="#818CF8" />
 
-              {/* Node 5: Figma to Outer Ring */}
-              <line x1="100" y1="445" x2="155" y2="385" stroke="url(#circuitGrad)" strokeWidth="1.5" strokeDasharray="3 3" />
-              <circle cx="100" cy="445" r="3.5" fill="#818CF8" />
+              {/* Node 5: Figma to Profile Ring */}
+              <line x1="97" y1="465" x2="145" y2="405" stroke="url(#circuitGrad)" strokeWidth="1.5" strokeDasharray="3 3" />
+              <circle cx="97" cy="465" r="3.5" fill="#818CF8" />
 
-              {/* Node 6: Database to Outer Ring */}
-              <line x1="440" y1="445" x2="385" y2="385" stroke="url(#circuitGrad)" strokeWidth="1.5" strokeDasharray="3 3" />
-              <circle cx="440" cy="445" r="3.5" fill="#818CF8" />
+              {/* Node 6: Database to Profile Ring */}
+              <line x1="483" y1="465" x2="435" y2="405" stroke="url(#circuitGrad)" strokeWidth="1.5" strokeDasharray="3 3" />
+              <circle cx="483" cy="465" r="3.5" fill="#818CF8" />
             </svg>
 
             {/* Central Circular Profile Frame with Glowing Neon Border */}
@@ -293,11 +286,6 @@ export default function HeroBanner() {
                 <span className={styles.availableText}>Available for Projects</span>
               </div>
             </div>
-
-            {/* Decorative Honeycomb Faint Hexagons in Background */}
-            <HexagonCard isDecor className={styles.decorHex1} />
-            <HexagonCard isDecor className={styles.decorHex2} />
-            <HexagonCard isDecor className={styles.decorHex3} />
 
             {/* Six Floating Hexagonal Technology Cards */}
             {/* 1. Top-Left: React */}

@@ -34,18 +34,18 @@
   display: block;
 }
 
-/* Central Content Container: 1300px max-width, 2-column balanced grid */
+/* Central Content Container: 1380px max-width, balanced 2-column grid */
 .heroContainer {
   position: relative;
   z-index: 5;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1380px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.05fr 1fr;
   align-items: center;
-  gap: 60px;
+  gap: 50px;
 }
 
 /* --------------------------------------------------------------------------
@@ -120,7 +120,7 @@
 
 /* 4. Animated Typing Text */
 .typingContainer {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 4px;
   min-height: 48px;
@@ -247,6 +247,7 @@
 
 /* --------------------------------------------------------------------------
    Right Column - Profile & Orbit Layout
+   Single prominent, enlarged circular profile image with neat flow of tech cards
    -------------------------------------------------------------------------- */
 .rightColumn {
   display: flex;
@@ -257,30 +258,12 @@
 
 .orbitStage {
   position: relative;
-  width: 540px;
-  height: 500px;
+  width: 580px;
+  height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Outer Concentric Glowing Neon Circular Ring */
-.outerNeonRing {
-  position: absolute;
-  top: 35px;
-  left: 55px;
-  width: 430px;
-  height: 430px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 35%, #3B82F6 75%, #06B6D4 100%) border-box;
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0.85;
-  filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.25));
-  z-index: 2;
-  pointer-events: none;
+  margin: 0 auto;
 }
 
 /* SVG Circuit Connecting Trace Lines */
@@ -294,22 +277,29 @@
   pointer-events: none;
 }
 
-/* Circular Profile Frame with Glowing Neon Gradient Border */
+/* Single Large Circular Profile Frame with Glowing Neon Gradient Border */
 .profileRing {
   position: absolute;
-  top: 90px;
-  left: 110px;
-  width: 320px;
-  height: 320px;
+  top: 50px;
+  left: 80px;
+  width: 420px;
+  height: 420px;
   border-radius: 50%;
-  padding: 4px;
-  background: linear-gradient(135deg, #EC4899 0%, #7928CA 35%, #2563EB 75%, #06B6D4 100%);
-  box-shadow: 0 16px 40px -8px rgba(121, 40, 202, 0.32),
-              0 0 25px rgba(37, 99, 235, 0.2);
+  padding: 5px;
+  background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 35%, #2563EB 75%, #06B6D4 100%);
+  box-shadow: 0 20px 50px -10px rgba(121, 40, 202, 0.35),
+              0 0 35px rgba(37, 99, 235, 0.22);
   z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profileRing:hover {
+  transform: scale(1.015);
+  box-shadow: 0 25px 60px -10px rgba(121, 40, 202, 0.42),
+              0 0 45px rgba(37, 99, 235, 0.3);
 }
 
 .profileAperture {
@@ -324,32 +314,32 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
   border-radius: 50%;
   display: block;
-  transform: scale(1.08);
+  transform: scale(1.02);
   transition: transform 0.4s ease;
 }
 
 .profileRing:hover .profileImage {
-  transform: scale(1.13);
+  transform: scale(1.05);
 }
 
 /* Available for Projects Badge */
 .availableBadge {
   position: absolute;
-  bottom: -15px;
+  bottom: -16px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
   border-radius: 50px;
-  padding: 8px 18px;
+  padding: 9px 20px;
   display: flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 10px 25px -4px rgba(16, 45, 117, 0.15);
+  box-shadow: 0 10px 25px -4px rgba(16, 45, 117, 0.16);
   white-space: nowrap;
 }
 
@@ -381,7 +371,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Six Floating Hexagonal Technology Cards & Honeycomb Decors
+   Six Floating Hexagonal Technology Cards
    -------------------------------------------------------------------------- */
 .hexCard {
   position: absolute;
@@ -435,83 +425,46 @@
   }
 }
 
-/* Faint Decorative Background Honeycomb Hexagons */
-.hexDecorCard {
-  z-index: 2;
-  filter: none;
-  pointer-events: none;
-  opacity: 0.55;
-}
-
-.hexDecorPath {
-  fill: #FFFFFF;
-  fill-opacity: 0.75;
-  stroke: #E2E8F0;
-  stroke-width: 1.5;
-}
-
-.decorHex1 {
-  width: 78px;
-  height: 68px;
-  top: 110px;
-  left: 20px;
-}
-
-.decorHex2 {
-  width: 78px;
-  height: 68px;
-  top: 315px;
-  left: 20px;
-}
-
-.decorHex3 {
-  width: 78px;
-  height: 68px;
-  top: 214px;
-  right: -55px;
-  opacity: 0.4;
-}
-
-/* Exact Positions of the Six Hexagonal Tech Cards */
+/* Exact Symmetrical Orbit Positions Around the 420px Profile Ring */
 /* 1. Top-Left: React */
 .hexPosReact {
-  top: 15px;
-  left: 60px;
+  top: 18px;
+  left: 55px;
   animation-delay: 0s;
 }
 
 /* 2. Top-Right: Java */
 .hexPosJava {
-  top: 15px;
-  right: 60px;
+  top: 18px;
+  right: 55px;
   animation-delay: 0.4s;
 }
 
 /* 3. Middle-Left: HTML / Code */
 .hexPosCode {
-  top: 214px;
-  left: -10px;
+  top: 224px;
+  left: -12px;
   animation-delay: 0.8s;
 }
 
 /* 4. Middle-Right: MongoDB */
 .hexPosMongo {
-  top: 214px;
-  right: -10px;
+  top: 224px;
+  right: -12px;
   animation-delay: 1.2s;
 }
 
 /* 5. Bottom-Left: Figma */
 .hexPosFigma {
-  bottom: 25px;
-  left: 60px;
+  bottom: 18px;
+  left: 55px;
   animation-delay: 1.6s;
 }
 
 /* 6. Bottom-Right: Database */
 .hexPosDatabase {
-  bottom: 25px;
-  right: 60px;
+  bottom: 18px;
+  right: 55px;
   animation-delay: 2.0s;
 }
 
@@ -520,7 +473,8 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .heroContainer {
-    gap: 40px;
+    gap: 30px;
+    padding: 0 24px;
   }
 
   .mainHeading {
@@ -532,39 +486,28 @@
   }
 
   .orbitStage {
-    width: 480px;
-    height: 460px;
-  }
-
-  .outerNeonRing {
-    top: 25px;
-    left: 45px;
-    width: 390px;
-    height: 390px;
+    width: 520px;
+    height: 480px;
   }
 
   .profileRing {
-    top: 80px;
-    left: 100px;
-    width: 280px;
-    height: 280px;
+    top: 50px;
+    left: 70px;
+    width: 380px;
+    height: 380px;
   }
 
   .hexCard {
-    width: 72px;
-    height: 64px;
+    width: 74px;
+    height: 66px;
   }
 
-  .hexPosReact { top: 12px; left: 50px; }
-  .hexPosJava { top: 12px; right: 50px; }
-  .hexPosCode { top: 198px; left: -8px; }
-  .hexPosMongo { top: 198px; right: -8px; }
-  .hexPosFigma { bottom: 20px; left: 50px; }
-  .hexPosDatabase { bottom: 20px; right: 50px; }
-
-  .decorHex1 { top: 98px; left: 15px; width: 68px; height: 60px; }
-  .decorHex2 { top: 290px; left: 15px; width: 68px; height: 60px; }
-  .decorHex3 { display: none; }
+  .hexPosReact { top: 15px; left: 45px; }
+  .hexPosJava { top: 15px; right: 45px; }
+  .hexPosCode { top: 207px; left: -10px; }
+  .hexPosMongo { top: 207px; right: -10px; }
+  .hexPosFigma { bottom: 15px; left: 45px; }
+  .hexPosDatabase { bottom: 15px; right: 45px; }
 }
 
 /* Tablet Layout (Screens <= 960px) */
@@ -601,36 +544,29 @@
   }
 
   .orbitStage {
-    width: 440px;
-    height: 420px;
+    width: 480px;
+    height: 440px;
     margin-top: 10px;
   }
 
-  .outerNeonRing {
-    top: 20px;
-    left: 40px;
-    width: 360px;
-    height: 360px;
-  }
-
   .profileRing {
-    top: 75px;
-    left: 95px;
-    width: 250px;
-    height: 250px;
+    top: 45px;
+    left: 65px;
+    width: 350px;
+    height: 350px;
   }
 
   .hexCard {
-    width: 66px;
-    height: 58px;
+    width: 68px;
+    height: 60px;
   }
 
-  .hexPosReact { top: 10px; left: 45px; }
-  .hexPosJava { top: 10px; right: 45px; }
-  .hexPosCode { top: 181px; left: -5px; }
-  .hexPosMongo { top: 181px; right: -5px; }
-  .hexPosFigma { bottom: 18px; left: 45px; }
-  .hexPosDatabase { bottom: 18px; right: 45px; }
+  .hexPosReact { top: 12px; left: 40px; }
+  .hexPosJava { top: 12px; right: 40px; }
+  .hexPosCode { top: 190px; left: -8px; }
+  .hexPosMongo { top: 190px; right: -8px; }
+  .hexPosFigma { bottom: 12px; left: 40px; }
+  .hexPosDatabase { bottom: 12px; right: 40px; }
 }
 
 /* Mobile Layout (Screens <= 640px and below) */
@@ -700,28 +636,21 @@
 
   /* Orbit Stage on Mobile */
   .orbitStage {
-    width: 320px;
-    height: 310px;
+    width: 340px;
+    height: 320px;
     margin: 15px auto 0;
   }
 
-  .outerNeonRing {
-    top: 15px;
-    left: 20px;
-    width: 280px;
-    height: 280px;
-  }
-
   .profileRing {
-    top: 55px;
-    left: 60px;
-    width: 200px;
-    height: 200px;
+    top: 35px;
+    left: 45px;
+    width: 250px;
+    height: 250px;
   }
 
   .availableBadge {
-    padding: 6px 12px;
-    bottom: -10px;
+    padding: 6px 14px;
+    bottom: -12px;
   }
 
   .availableText {
@@ -733,14 +662,10 @@
     height: 46px;
   }
 
-  .hexPosReact { top: 6px; left: 24px; }
-  .hexPosJava { top: 6px; right: 24px; }
-  .hexPosCode { top: 132px; left: -2px; }
-  .hexPosMongo { top: 132px; right: -2px; }
-  .hexPosFigma { bottom: 10px; left: 24px; }
-  .hexPosDatabase { bottom: 10px; right: 24px; }
-
-  .decorHex1, .decorHex2, .decorHex3 {
-    display: none;
-  }
+  .hexPosReact { top: 8px; left: 26px; }
+  .hexPosJava { top: 8px; right: 26px; }
+  .hexPosCode { top: 137px; left: 0px; }
+  .hexPosMongo { top: 137px; right: 0px; }
+  .hexPosFigma { bottom: 8px; left: 26px; }
+  .hexPosDatabase { bottom: 8px; right: 26px; }
 }
