@@ -1,5 +1,18 @@
-import { useState } from 'react'
-import { Code2, Globe, Palette, Megaphone, CheckCircle2, ChevronRight, ArrowRight } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import {
+  Code2,
+  Globe,
+  Palette,
+  Megaphone,
+  CheckCircle2,
+  ChevronRight,
+  ArrowRight,
+  ChevronLeft,
+  RotateCw,
+  ExternalLink,
+  Sparkles,
+  ArrowUpRight,
+} from 'lucide-react'
 import NavBar from './components/nav-bar'
 import HeroBanner from './components/HeroBanner'
 import websiteDevImg from './assets/website_developement.png'
@@ -533,6 +546,285 @@ const servicesData = [
   },
 ]
 
+// ============================================================================
+// Ongoing Projects Visual Illustrations & Data
+// 1) Sridevi Sarees Collection
+// 2) Prime Real Estate
+// 3) Event Management
+// 4) Enterprise Project (uses erpSolutionImg)
+// ============================================================================
+
+// 01. Sridevi Sarees Collection: Luxury boutique storefront & silk drape visualizer
+function SrideviSareesIllustration() {
+  return (
+    <svg viewBox="0 0 340 165" fill="none" xmlns="http://www.w3.org/2000/svg" className="ongoing-illus-svg">
+      <defs>
+        <linearGradient id="sareeBgGrad" x1="0" y1="0" x2="340" y2="165" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#2A0845" />
+          <stop offset="50%" stopColor="#4B1248" />
+          <stop offset="100%" stopColor="#1E0533" />
+        </linearGradient>
+        <linearGradient id="goldSilkGrad" x1="0" y1="0" x2="200" y2="150" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#F59E0B" />
+          <stop offset="35%" stopColor="#FDE68A" />
+          <stop offset="70%" stopColor="#D97706" />
+          <stop offset="100%" stopColor="#B45309" />
+        </linearGradient>
+        <linearGradient id="palluCrimsonGrad" x1="0" y1="0" x2="160" y2="140" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#E11D48" />
+          <stop offset="60%" stopColor="#9F1239" />
+          <stop offset="100%" stopColor="#4C0519" />
+        </linearGradient>
+      </defs>
+      <rect width="340" height="165" rx="10" fill="url(#sareeBgGrad)" />
+
+      {/* Decorative Gold Mandala / Motif Accents */}
+      <circle cx="280" cy="40" r="45" stroke="#F59E0B" strokeWidth="0.8" strokeDasharray="3 3" opacity="0.35" />
+      <circle cx="280" cy="40" r="30" stroke="#FDE68A" strokeWidth="0.8" opacity="0.25" />
+      <circle cx="50" cy="130" r="35" stroke="#F59E0B" strokeWidth="0.8" strokeDasharray="2 4" opacity="0.2" />
+
+      {/* Left Storefront Preview Card */}
+      <g filter="drop-shadow(0 4px 14px rgba(0,0,0,0.4))">
+        <rect x="20" y="20" width="135" height="125" rx="8" fill="#1C062E" stroke="#701A75" strokeWidth="1" />
+        <rect x="20" y="20" width="135" height="26" rx="8" fill="#2E0854" />
+        <text x="30" y="37" fontFamily="'Playfair Display', Georgia, serif" fontSize="9" fontWeight="700" fill="#FDE68A" letterSpacing="0.6">
+          SRIDEVI SAREES
+        </text>
+        <path d="M 40 55 Q 60 48 85 58 T 130 52 L 142 120 Q 95 135 32 118 Z" fill="url(#palluCrimsonGrad)" />
+        <path d="M 42 58 Q 62 52 87 62 T 132 56" stroke="url(#goldSilkGrad)" strokeWidth="2.5" fill="none" />
+        <path d="M 38 72 Q 62 66 90 76 T 136 70" stroke="url(#goldSilkGrad)" strokeWidth="1.8" fill="none" opacity="0.85" />
+        <path d="M 34 86 Q 62 80 93 90 T 140 84" stroke="url(#goldSilkGrad)" strokeWidth="1.8" fill="none" opacity="0.7" />
+        <rect x="28" y="122" width="60" height="16" rx="3" fill="#0F031A" opacity="0.9" />
+        <text x="33" y="133" fontFamily="'Inter', sans-serif" fontSize="7.5" fontWeight="700" fill="#34D399">₹18,500</text>
+        <rect x="94" y="122" width="52" height="16" rx="3" fill="#D97706" />
+        <text x="99" y="133" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="700" fill="#FFFFFF">★ 4.9 Silk</text>
+      </g>
+
+      {/* Right Column: E-Commerce UI Elements */}
+      <rect x="170" y="24" width="70" height="18" rx="9" fill="#701A75" />
+      <text x="180" y="36" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="600" fill="#FDE68A">Kanchipuram</text>
+      <rect x="246" y="24" width="54" height="18" rx="9" fill="#3B0764" stroke="#701A75" strokeWidth="0.8" />
+      <text x="254" y="36" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="600" fill="#E9D5FF">Banarasi</text>
+
+      <rect x="170" y="50" width="148" height="38" rx="6" fill="#1E0733" stroke="#4C1D95" strokeWidth="0.8" />
+      <rect x="176" y="56" width="28" height="26" rx="4" fill="url(#goldSilkGrad)" />
+      <text x="210" y="66" fontFamily="'Inter', sans-serif" fontSize="7.5" fontWeight="700" fill="#FFFFFF">Pure Royal Zari Silk</text>
+      <text x="210" y="78" fontFamily="'Inter', sans-serif" fontSize="6.5" fill="#C084FC">Handwoven • Festive Edition</text>
+
+      <rect x="170" y="96" width="148" height="48" rx="6" fill="#2E0854" stroke="#701A75" strokeWidth="0.8" />
+      <text x="180" y="112" fontFamily="'Inter', sans-serif" fontSize="8" fontWeight="700" fill="#FDE68A">Checkout Ready</text>
+      <text x="180" y="124" fontFamily="'Inter', sans-serif" fontSize="7" fill="#E2E8F0">Razorpay Integrated</text>
+      <rect x="180" y="130" width="60" height="8" rx="4" fill="#10B981" />
+      <text x="252" y="137" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="600" fill="#10B981">Verified 100%</text>
+    </svg>
+  )
+}
+
+// 02. Prime Real Estate: Luxury modern villa architectural showcase
+function PrimeRealEstateIllustration() {
+  return (
+    <svg viewBox="0 0 340 165" fill="none" xmlns="http://www.w3.org/2000/svg" className="ongoing-illus-svg">
+      <defs>
+        <linearGradient id="reBgGrad" x1="0" y1="0" x2="340" y2="165" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#0B132B" />
+          <stop offset="50%" stopColor="#1C2541" />
+          <stop offset="100%" stopColor="#0F172A" />
+        </linearGradient>
+        <linearGradient id="glassPoolGrad" x1="0" y1="0" x2="180" y2="60" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#06B6D4" />
+          <stop offset="100%" stopColor="#0284C7" />
+        </linearGradient>
+        <linearGradient id="warmLightGrad" x1="0" y1="0" x2="100" y2="80" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#FEF08A" />
+          <stop offset="100%" stopColor="#F59E0B" />
+        </linearGradient>
+      </defs>
+      <rect width="340" height="165" rx="10" fill="url(#reBgGrad)" />
+
+      {/* Modern Luxury Villa Structure */}
+      <g filter="drop-shadow(0 6px 16px rgba(0,0,0,0.5))">
+        <polygon points="26,125 26,55 120,40 180,40 180,125" fill="#1E293B" stroke="#334155" strokeWidth="1" />
+        <rect x="70" y="32" width="115" height="42" rx="3" fill="#0F172A" stroke="#475569" strokeWidth="0.8" />
+        <rect x="80" y="38" width="44" height="30" rx="2" fill="url(#warmLightGrad)" opacity="0.9" />
+        <line x1="102" y1="38" x2="102" y2="68" stroke="#78350F" strokeWidth="1" />
+        <rect x="130" y="38" width="48" height="30" rx="2" fill="url(#warmLightGrad)" opacity="0.85" />
+        <line x1="154" y1="38" x2="154" y2="68" stroke="#78350F" strokeWidth="1" />
+
+        <rect x="36" y="78" width="48" height="42" rx="2" fill="url(#warmLightGrad)" opacity="0.75" />
+        <rect x="92" y="78" width="35" height="47" rx="1" fill="#0A0F1D" stroke="#64748B" strokeWidth="0.8" />
+        <rect x="134" y="78" width="40" height="42" rx="2" fill="url(#warmLightGrad)" opacity="0.65" />
+
+        <polygon points="26,128 180,128 170,152 36,152" fill="url(#glassPoolGrad)" />
+        <line x1="42" y1="136" x2="165" y2="136" stroke="#FFFFFF" strokeWidth="1" strokeDasharray="6 8" opacity="0.7" />
+        <line x1="48" y1="144" x2="160" y2="144" stroke="#FFFFFF" strokeWidth="0.8" strokeDasharray="4 6" opacity="0.5" />
+      </g>
+
+      {/* Floating Property Meta HUD Card on Right */}
+      <g filter="drop-shadow(0 4px 16px rgba(0,0,0,0.45))">
+        <rect x="195" y="20" width="128" height="125" rx="8" fill="#151F36" stroke="#2563EB" strokeWidth="1" />
+        <rect x="204" y="28" width="70" height="16" rx="4" fill="#0284C7" />
+        <text x="210" y="39" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="700" fill="#FFFFFF">PRIME REALTY</text>
+        <circle cx="308" cy="36" r="4" fill="#10B981" />
+
+        <text x="204" y="60" fontFamily="'Playfair Display', Georgia, serif" fontSize="13" fontWeight="800" fill="#FFFFFF">$1,450,000</text>
+        <text x="204" y="72" fontFamily="'Inter', sans-serif" fontSize="7" fill="#94A3B8">Beverly Hills & Silicon Oasis</text>
+
+        <rect x="204" y="80" width="110" height="36" rx="4" fill="#0B132B" stroke="#1E293B" strokeWidth="0.6" />
+        <text x="210" y="93" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="600" fill="#60A5FA">4 Beds</text>
+        <text x="246" y="93" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="600" fill="#60A5FA">3 Baths</text>
+        <text x="280" y="93" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="600" fill="#60A5FA">3.8k sqft</text>
+        <text x="210" y="106" fontFamily="'Inter', sans-serif" fontSize="6.5" fill="#94A3B8">Virtual 3D Tour Ready</text>
+
+        <rect x="204" y="122" width="110" height="15" rx="3" fill="#2563EB" />
+        <text x="222" y="132" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="700" fill="#FFFFFF">Explore Listings ↗</text>
+      </g>
+    </svg>
+  )
+}
+
+// 03. Event Management: Stage coordination & celebration timeline portal
+function EventManagementIllustration() {
+  return (
+    <svg viewBox="0 0 340 165" fill="none" xmlns="http://www.w3.org/2000/svg" className="ongoing-illus-svg">
+      <defs>
+        <linearGradient id="eventBgGrad" x1="0" y1="0" x2="340" y2="165" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#120A2A" />
+          <stop offset="50%" stopColor="#25124D" />
+          <stop offset="100%" stopColor="#0B061A" />
+        </linearGradient>
+        <linearGradient id="spotlightGrad1" x1="50" y1="10" x2="110" y2="140" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#A855F7" stopOpacity="0.75" />
+          <stop offset="100%" stopColor="#A855F7" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient id="spotlightGrad2" x1="170" y1="10" x2="170" y2="140" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#38BDF8" stopOpacity="0.7" />
+          <stop offset="100%" stopColor="#38BDF8" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient id="spotlightGrad3" x1="290" y1="10" x2="230" y2="140" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#EC4899" stopOpacity="0.75" />
+          <stop offset="100%" stopColor="#EC4899" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      <rect width="340" height="165" rx="10" fill="url(#eventBgGrad)" />
+
+      {/* Stage Spotlights Cones */}
+      <polygon points="50,10 10,150 120,150" fill="url(#spotlightGrad1)" />
+      <polygon points="170,10 120,150 220,150" fill="url(#spotlightGrad2)" />
+      <polygon points="290,10 220,150 330,150" fill="url(#spotlightGrad3)" />
+
+      {/* Overhead Lighting Truss Grid */}
+      <line x1="30" y1="14" x2="310" y2="14" stroke="#4C1D95" strokeWidth="2" />
+      <circle cx="50" cy="14" r="5" fill="#C084FC" />
+      <circle cx="110" cy="14" r="4" fill="#38BDF8" />
+      <circle cx="170" cy="14" r="5" fill="#F472B6" />
+      <circle cx="230" cy="14" r="4" fill="#38BDF8" />
+      <circle cx="290" cy="14" r="5" fill="#C084FC" />
+
+      {/* Confetti / Sparkle Particles */}
+      <circle cx="80" cy="50" r="1.5" fill="#FDE047" />
+      <circle cx="130" cy="70" r="1.8" fill="#FFFFFF" />
+      <circle cx="210" cy="45" r="1.5" fill="#38BDF8" />
+      <circle cx="260" cy="75" r="2" fill="#F472B6" />
+
+      {/* Left Event Schedule Card */}
+      <g filter="drop-shadow(0 4px 14px rgba(0,0,0,0.5))">
+        <rect x="22" y="32" width="140" height="112" rx="8" fill="#1B1038" stroke="#7C3AED" strokeWidth="1" />
+        <rect x="22" y="32" width="140" height="24" rx="8" fill="#2E1B5B" />
+        <text x="32" y="48" fontFamily="'Inter', sans-serif" fontSize="8" fontWeight="700" fill="#E9D5FF">EVENT COORDINATOR</text>
+        <rect x="30" y="64" width="34" height="34" rx="4" fill="#7C3AED" />
+        <text x="38" y="76" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="700" fill="#FFFFFF">NOV</text>
+        <text x="37" y="92" fontFamily="'Inter', sans-serif" fontSize="13" fontWeight="800" fill="#FFFFFF">24</text>
+        <text x="70" y="74" fontFamily="'Inter', sans-serif" fontSize="8" fontWeight="700" fill="#FFFFFF">Grand Gala 2026</text>
+        <text x="70" y="85" fontFamily="'Inter', sans-serif" fontSize="6.5" fill="#C4B5FD">Royal Ballroom & Lawn</text>
+        <text x="70" y="96" fontFamily="'Inter', sans-serif" fontSize="6.5" fill="#34D399">RSVP: 520 Confirmed</text>
+        <rect x="30" y="108" width="124" height="26" rx="4" fill="#120A2A" stroke="#372266" strokeWidth="0.8" />
+        <text x="36" y="120" fontFamily="'Inter', sans-serif" fontSize="6.5" fontWeight="600" fill="#E2E8F0">Catering, Decor & AV Stage</text>
+        <text x="36" y="129" fontFamily="'Inter', sans-serif" fontSize="6.5" fill="#A78BFA">Vendor Contracts Locked</text>
+      </g>
+
+      {/* Right Live Management HUD */}
+      <g filter="drop-shadow(0 4px 14px rgba(0,0,0,0.4))">
+        <rect x="176" y="38" width="142" height="106" rx="8" fill="#180F33" stroke="#EC4899" strokeWidth="0.8" />
+        <rect x="184" y="48" width="60" height="16" rx="4" fill="#DB2777" />
+        <text x="190" y="59" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="700" fill="#FFFFFF">LIVE PORTAL</text>
+        <circle cx="304" cy="56" r="4" fill="#10B981" />
+
+        <text x="184" y="80" fontFamily="'Inter', sans-serif" fontSize="8" fontWeight="700" fill="#FFFFFF">Interactive Timeline</text>
+        <rect x="184" y="88" width="124" height="6" rx="3" fill="#311B61" />
+        <rect x="184" y="88" width="85" height="6" rx="3" fill="url(#spotlightGrad1)" />
+
+        <rect x="184" y="102" width="124" height="32" rx="4" fill="#100824" />
+        <text x="190" y="114" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="600" fill="#38BDF8">Guest QR Check-in</text>
+        <text x="190" y="125" fontFamily="'Inter', sans-serif" fontSize="6.5" fill="#94A3B8">Automated SMS & Email Alerts</text>
+      </g>
+    </svg>
+  )
+}
+
+// 4 Ongoing Projects Data for Section 05
+const ongoingProjectsData = [
+  {
+    id: 'sridevi-sarees',
+    number: '01',
+    title: 'Sridevi Sarees Collection',
+    category: 'E-Commerce & Ethnic Fashion',
+    illustration: SrideviSareesIllustration,
+    status: 'In Progress (85%)',
+    progress: 85,
+    shortDesc: 'Luxury boutique e-commerce storefront with dynamic silk collections and real-time checkout.',
+    fullDesc:
+      'An exclusive digital boutique engineered for traditional Indian ethnic wear and designer sarees. Features an interactive saree visualizer, dynamic fabric filtering, fast cart checkout, and mobile-first shopping experience with secure payment gateway integration.',
+    tags: ['React 19', 'Tailwind CSS', 'Node.js', 'Razorpay', 'State Management'],
+    link: '#contact',
+    linkText: 'Explore Storefront',
+  },
+  {
+    id: 'prime-real-estate',
+    number: '02',
+    title: 'Prime Real Estate',
+    category: 'Property Portal & Lead CRM',
+    illustration: PrimeRealEstateIllustration,
+    status: 'Active Testing (75%)',
+    progress: 75,
+    shortDesc: 'High-end real estate portal for luxury property listings, virtual tours and client lead capture.',
+    fullDesc:
+      'A comprehensive modern property marketplace connecting premium buyers with luxury residential and commercial listings. Equipped with interactive property maps, EMI calculators, virtual 3D tour embeds, and automated lead routing for real estate consultants.',
+    tags: ['React', 'Spring Boot', 'MongoDB', 'Maps API', 'REST Services'],
+    link: '#contact',
+    linkText: 'View Property Portal',
+  },
+  {
+    id: 'event-management',
+    number: '03',
+    title: 'Event Management',
+    category: 'Booking & Vendor Ecosystem',
+    illustration: EventManagementIllustration,
+    status: 'Development (65%)',
+    progress: 65,
+    shortDesc: 'All-in-one event scheduling, guest RSVP tracking, and catering vendor coordination system.',
+    fullDesc:
+      'An end-to-end digital event planning and vendor management system. Simplifies banquet reservations, guest RSVP tracking, catering logistics, vendor contracts, and dynamic schedule timelines for corporate and private gatherings.',
+    tags: ['React', 'Express.js', 'PostgreSQL', 'Tailwind', 'Cloudinary'],
+    link: '#contact',
+    linkText: 'View Event Platform',
+  },
+  {
+    id: 'enterprise-project',
+    number: '04',
+    title: 'Enterprise Project',
+    category: 'Custom ERP & Business Operations',
+    image: erpSolutionImg,
+    status: 'Enterprise Deploy (90%)',
+    progress: 90,
+    shortDesc: 'Comprehensive cloud ERP suite for departmental analytics, inventory and automated billing.',
+    fullDesc:
+      'A scalable cloud-native Enterprise Resource Planning (ERP) platform architected for corporate workflows. Unifies multi-department operations, supply chain inventory, real-time fiscal reporting, human resource modules, and strict role-based access control.',
+    tags: ['React', 'Java', 'Spring Boot', 'Microservices', 'SQL Server'],
+    link: '#contact',
+    linkText: 'Open ERP Demo',
+  },
+]
+
 
 // 4 Tabs Data for the About Section
 const aboutTabsData = [
@@ -617,6 +909,47 @@ const aboutTabsData = [
 export default function App() {
   const [activeTabId, setActiveTabId] = useState('fullstack')
   const [showAllTech, setShowAllTech] = useState(false)
+  const [ongoingSlideIndex, setOngoingSlideIndex] = useState(0)
+  const [flippedCards, setFlippedCards] = useState({})
+  const [isOngoingAutoPlay, setIsOngoingAutoPlay] = useState(true)
+
+  const totalOngoingProjects = ongoingProjectsData.length // 4
+
+  const handleNextOngoing = () => {
+    setOngoingSlideIndex((prev) => (prev >= totalOngoingProjects - 1 ? 0 : prev + 1))
+  }
+
+  const handlePrevOngoing = () => {
+    setOngoingSlideIndex((prev) => (prev <= 0 ? totalOngoingProjects - 1 : prev - 1))
+  }
+
+  const handleCardHover = (id, isHovered) => {
+    if (isHovered) {
+      setIsOngoingAutoPlay(false)
+    } else {
+      setIsOngoingAutoPlay(true)
+    }
+    setFlippedCards((prev) => ({
+      ...prev,
+      [id]: isHovered,
+    }))
+  }
+
+  const toggleCardFlip = (id) => {
+    setFlippedCards((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }))
+  }
+
+  // Auto-play sliding animation with hover pause
+  useEffect(() => {
+    if (!isOngoingAutoPlay) return
+    const timer = setInterval(() => {
+      setOngoingSlideIndex((prev) => (prev >= totalOngoingProjects - 1 ? 0 : prev + 1))
+    }, 4500)
+    return () => clearInterval(timer)
+  }, [isOngoingAutoPlay, totalOngoingProjects])
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -887,6 +1220,226 @@ export default function App() {
                     </div>
                   )
                 })}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ==================================================================
+            Section 05 – Ongoing Projects
+            col-lg-4: Badge, Heading, Tagline, Controls
+            col-lg-8: Sliding Part with 3D Backward Flip Cards on Hover
+            ================================================================== */}
+        <section id="projects" className="ongoing-section">
+          <div className="ongoing-container">
+            <div className="ongoing-row">
+              {/* Left Column: col-lg-4 (Tagline, Heading & Controls) */}
+              <div className="ongoing-col-info col-lg-4">
+                <div className="ongoing-badge-wrap">
+                  <span className="ongoing-badge">
+                    <span className="ongoing-badge-dot" />
+                    CURRENT WORK IN PROGRESS
+                  </span>
+                </div>
+
+                <h2 className="ongoing-heading">
+                  Ongoing <span className="ongoing-heading-grad">Projects</span>
+                </h2>
+
+                <div className="ongoing-accent-bar">
+                  <span className="ongoing-bar-line" />
+                  <span className="ongoing-bar-dot" />
+                  <span className="ongoing-bar-line" />
+                </div>
+
+                <p className="ongoing-tagline">
+                  A curated preview of dynamic digital solutions, e-commerce boutiques, and enterprise applications currently under active engineering. Hover over any project card to flip it backward, reveal architecture details, and open live previews.
+                </p>
+
+                {/* Interactive Project Tracker & Slider Navigation */}
+                <div className="ongoing-controls-box">
+                  <div className="ongoing-counter-wrap">
+                    <span className="ongoing-counter-current">0{ongoingSlideIndex + 1}</span>
+                    <span className="ongoing-counter-slash">/</span>
+                    <span className="ongoing-counter-total">0{totalOngoingProjects}</span>
+                  </div>
+
+                  <div className="ongoing-nav-btns">
+                    <button
+                      type="button"
+                      onClick={handlePrevOngoing}
+                      className="ongoing-arrow-btn"
+                      aria-label="Previous Project"
+                      title="Previous Project"
+                    >
+                      <ChevronLeft size={18} />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleNextOngoing}
+                      className="ongoing-arrow-btn"
+                      aria-label="Next Project"
+                      title="Next Project"
+                    >
+                      <ChevronRight size={18} />
+                    </button>
+                  </div>
+
+                  {/* Dot Indicators */}
+                  <div className="ongoing-dots">
+                    {ongoingProjectsData.map((_, idx) => (
+                      <button
+                        key={idx}
+                        type="button"
+                        onClick={() => setOngoingSlideIndex(idx)}
+                        className={`ongoing-dot ${idx === ongoingSlideIndex ? 'active' : ''}`}
+                        aria-label={`Go to project 0${idx + 1}`}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Highlights Summary Badges */}
+                <div className="ongoing-summary-chips">
+                  <span className="ongoing-chip">
+                    <Sparkles size={14} className="ongoing-chip-icon" />
+                    4 Active Builds
+                  </span>
+                  <span className="ongoing-chip">
+                    <RotateCw size={14} className="ongoing-chip-icon" />
+                    Hover to Flip Backward 3D
+                  </span>
+                </div>
+              </div>
+
+              {/* Right Column: col-lg-8 (Project Sliding Part) */}
+              <div
+                className="ongoing-col-slider col-lg-8"
+                onMouseEnter={() => setIsOngoingAutoPlay(false)}
+                onMouseLeave={() => setIsOngoingAutoPlay(true)}
+              >
+                <div className="ongoing-slider-window">
+                  <div
+                    className="ongoing-slider-track"
+                    style={{
+                      transform: `translateX(calc(-${ongoingSlideIndex} * (var(--ongoing-card-w, 360px) + 20px)))`,
+                    }}
+                  >
+                    {[...ongoingProjectsData, ...ongoingProjectsData].map((project, index) => {
+                      const Illustration = project.illustration
+                      const isFlipped = flippedCards[project.id]
+                      const uniqueKey = `${project.id}-${index}`
+
+                      return (
+                        <div
+                          key={uniqueKey}
+                          className={`ongoing-flip-card ${isFlipped ? 'is-flipped' : ''}`}
+                          onMouseEnter={() => handleCardHover(project.id, true)}
+                          onMouseLeave={() => handleCardHover(project.id, false)}
+                          onClick={() => toggleCardFlip(project.id)}
+                          tabIndex={0}
+                          role="region"
+                          aria-label={`Project: ${project.title}. Hover or click to flip card.`}
+                        >
+                          <div className="ongoing-card-inner">
+                            {/* FRONT FACE OF CARD */}
+                            <div className="ongoing-card-front">
+                              <div>
+                                <div className="ongoing-front-top">
+                                  <span className="ongoing-status-badge">
+                                    <span className="ongoing-status-pulse" />
+                                    {project.status}
+                                  </span>
+                                  <span className="ongoing-num-badge">{project.number}</span>
+                                </div>
+
+                                <div className="ongoing-image-box">
+                                  {project.image ? (
+                                    <img
+                                      src={project.image}
+                                      alt={project.title}
+                                      className="ongoing-project-img"
+                                      loading="lazy"
+                                    />
+                                  ) : Illustration ? (
+                                    <Illustration />
+                                  ) : null}
+                                </div>
+
+                                <div className="ongoing-front-info">
+                                  <span className="ongoing-front-cat">{project.category}</span>
+                                  <h3 className="ongoing-front-title">{project.title}</h3>
+                                  <p className="ongoing-front-desc">{project.shortDesc}</p>
+                                </div>
+                              </div>
+
+                              <div className="ongoing-flip-hint">
+                                <RotateCw size={13} className="ongoing-hint-icon" />
+                                <span>Hover to flip backward & explore</span>
+                              </div>
+                            </div>
+
+                            {/* BACK FACE OF CARD (REVEALED ON 3D BACKWARD FLIP) */}
+                            <div className="ongoing-card-back">
+                              <div className="ongoing-back-header">
+                                <div className="ongoing-back-top">
+                                  <span className="ongoing-back-cat">{project.category}</span>
+                                  <span className="ongoing-back-status">{project.status}</span>
+                                </div>
+                                <h3 className="ongoing-back-title">{project.title}</h3>
+                                <div className="ongoing-back-divider" />
+                                <p className="ongoing-back-desc">{project.fullDesc}</p>
+                              </div>
+
+                              <div className="ongoing-back-middle">
+                                <span className="ongoing-tech-heading">Technologies Deployed:</span>
+                                <div className="ongoing-back-tags">
+                                  {project.tags.map((tag, tIdx) => (
+                                    <span key={tIdx} className="ongoing-back-tag">
+                                      {tag}
+                                    </span>
+                                  ))}
+                                </div>
+
+                                <div className="ongoing-progress-container">
+                                  <div className="ongoing-progress-label">
+                                    <span>Milestone Completion</span>
+                                    <span>{project.progress}%</span>
+                                  </div>
+                                  <div className="ongoing-progress-track">
+                                    <div
+                                      className="ongoing-progress-bar"
+                                      style={{ width: `${project.progress}%` }}
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="ongoing-back-footer">
+                                <a
+                                  href={project.link}
+                                  className="ongoing-back-btn"
+                                  onClick={(e) => {
+                                    e.stopPropagation()
+                                    if (project.link === '#contact') {
+                                      const contactEl = document.getElementById('contact')
+                                      if (contactEl) {
+                                        contactEl.scrollIntoView({ behavior: 'smooth' })
+                                      }
+                                    }
+                                  }}
+                                >
+                                  <span>{project.linkText}</span>
+                                  <ArrowUpRight size={16} />
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
