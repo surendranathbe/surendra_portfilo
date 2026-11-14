@@ -1,7 +1,10 @@
 import { useState } from 'react'
-import { Code2, Globe, Palette, Megaphone, CheckCircle2, ChevronRight } from 'lucide-react'
+import { Code2, Globe, Palette, Megaphone, CheckCircle2, ChevronRight, ArrowRight } from 'lucide-react'
 import NavBar from './components/nav-bar'
 import HeroBanner from './components/HeroBanner'
+import websiteDevImg from './assets/website_developement.png'
+import erpSolutionImg from './assets/ERP_soluction.png'
+import figmaUiUxImg from './assets/figma_image.png'
 import './CSS/Home.css'
 
 // Exact BS Logo with Blue Gradient & Curved Underline Swoosh (as used in NavBar)
@@ -80,6 +83,456 @@ function ArrowDiagonalIcon({ className = '' }) {
     </svg>
   )
 }
+
+// ============================================================================
+// Official Technology Vector Logos for Technology Expertise Section
+// ============================================================================
+function ReactTechLogo() {
+  return (
+    <svg viewBox="-11.5 -10.23174 23 20.46348" width="34" height="34">
+      <circle cx="0" cy="0" r="2.05" fill="#00D8FE" />
+      <g stroke="#00D8FE" strokeWidth="1.15" fill="none">
+        <ellipse rx="11" ry="4.2" />
+        <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+        <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+      </g>
+    </svg>
+  )
+}
+
+function JavaTechLogo() {
+  return (
+    <svg viewBox="0 0 32 32" width="34" height="34" fill="none">
+      <path d="M12.5 24.5C17.5 24.5 20.5 23.5 20.5 23.5L21.5 22C17 22.8 13 22.8 9.5 22.8C6.5 22.8 9.5 24.5 12.5 24.5Z" fill="#E76F00" />
+      <path d="M10 20.5C14.5 20.5 22 19.5 22 19.5L22.8 18C17 19 11 19 7.5 19C4.5 19 7 20.5 10 20.5Z" fill="#E76F00" />
+      <path d="M17.5 15.5C19.5 14.2 21 12 18 9.5C16.2 8 17 6.8 17.5 5.5C15.8 7 14.5 8.5 15.2 10.2C16 12 14.5 13.2 13 14.5C15 14.5 16.5 15 17.5 15.5Z" fill="#5382A1" />
+      <path d="M12 13.5C13.2 12.2 14 10.5 12 8.5C10.8 7.2 11.5 6.2 12 5C10.5 6.2 9.5 7.5 10 9C10.8 10.5 9.5 11.5 8 12.5C9.5 12.5 11 13 12 13.5Z" fill="#E76F00" />
+      <path d="M20.5 27C17 28 10 28 6.5 27C5 26.5 4 25.5 5.5 25.5C8 25.5 18.5 25.5 21.5 25.5C23 25.5 22 26.5 20.5 27Z" fill="#5382A1" />
+    </svg>
+  )
+}
+
+function SpringBootTechLogo() {
+  return (
+    <svg viewBox="0 0 32 32" width="34" height="34" fill="none">
+      <rect width="32" height="32" rx="7" fill="#6DB33F" />
+      <path d="M16 6C13.2 9.8 13.6 14.5 17 17.5C20.4 20.5 25 20.5 25 20.5C25 20.5 24.8 15.5 21.5 12.2C18.2 8.9 16 6 16 6Z" fill="#FFFFFF" fillOpacity="0.9" />
+      <path d="M7 21C7 21 11.2 21.2 14.5 18.2C17.8 15.2 18.2 10.5 18.2 10.5C18.2 10.5 13.8 11.5 10.8 14.5C7.8 17.5 7 21 7 21Z" fill="#FFFFFF" />
+      <path d="M13 19.5L19 13.5" stroke="#6DB33F" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+function MongoTechLogo() {
+  return (
+    <svg viewBox="0 0 24 24" width="28" height="34" fill="none">
+      <path d="M12 2C12 2 6 8.5 6 14C6 17.5 8.5 20.5 12 22C15.5 20.5 18 17.5 18 14C18 8.5 12 2 12 2Z" fill="#13AA52" />
+      <path d="M12 2V22C11.6 21.8 11.2 21.6 10.8 21.3C7.8 19.3 6.8 15.8 7.8 12.8C8.5 10.5 10.2 8.5 12 2Z" fill="#00ED64" />
+      <path d="M11.8 14.2V21.8C11.8 21.8 11.7 20.5 11.7 18.5C11.7 16.5 11.8 14.2 11.8 14.2Z" fill="#FFFFFF" />
+    </svg>
+  )
+}
+
+function FigmaTechLogo() {
+  return (
+    <svg viewBox="0 0 38 57" width="22" height="34" fill="none">
+      <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE" />
+      <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83" />
+      <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262" />
+      <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E" />
+      <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF" />
+    </svg>
+  )
+}
+
+function HtmlCssTechLogo() {
+  return (
+    <svg viewBox="0 0 38 32" width="38" height="32" fill="none">
+      <g transform="translate(1, 2) scale(0.85)">
+        <path d="M2 2L4.5 26L12 28.5L19.5 26L22 2H2Z" fill="#E44D26" />
+        <path d="M12 4.2V26.2L17.8 24.3L19.8 4.2H12Z" fill="#F16529" />
+        <path d="M6.5 7H17.5L17.1 11H12V14H16.8L16.2 19.8L12 21.1V18.2L14.2 17.6L14.4 15.5H12V15.5H8L7.2 7H6.5Z" fill="#FFFFFF" />
+      </g>
+      <g transform="translate(17, 2) scale(0.85)">
+        <path d="M2 2L4.5 26L12 28.5L19.5 26L22 2H2Z" fill="#1572B6" />
+        <path d="M12 4.2V26.2L17.8 24.3L19.8 4.2H12Z" fill="#33A9DC" />
+        <path d="M6.5 7H17.5L17.1 11H12V14H16.8L16.2 19.8L12 21.1V18.2L14.2 17.6L14.4 15.5H12V15.5H8L7.2 7H6.5Z" fill="#FFFFFF" />
+      </g>
+    </svg>
+  )
+}
+
+function PhpTechLogo() {
+  return (
+    <svg viewBox="0 0 32 32" width="34" height="34" fill="none">
+      <ellipse cx="16" cy="16" rx="15" ry="10" fill="#777BB4" />
+      <path d="M9.5 13H12.5C13.8 13 14.5 13.5 14.2 14.8C13.9 16.1 12.8 16.8 11.5 16.8H10.2L9.5 20H8L9.5 13ZM10.5 15.5H11.8C12.4 15.5 12.8 15.2 13 14.5C13.1 14 12.8 13.8 12.2 13.8H11L10.5 15.5Z" fill="#FFFFFF" />
+      <path d="M15 13H16.5L15.8 16H18.2L18.8 13H20.3L18.8 20H17.3L18 17.2H15.6L15 20H13.5L15 13Z" fill="#FFFFFF" />
+      <path d="M21 13H24C25.3 13 26 13.5 25.7 14.8C25.4 16.1 24.3 16.8 23 16.8H21.7L21 20H19.5L21 13ZM22 15.5H23.3C23.9 15.5 24.3 15.2 24.5 14.5C24.6 14 24.3 13.8 23.7 13.8H22.5L22 15.5Z" fill="#FFFFFF" />
+    </svg>
+  )
+}
+
+function PhotoshopTechLogo() {
+  return (
+    <svg viewBox="0 0 32 32" width="34" height="34" fill="none">
+      <rect width="32" height="32" rx="7" fill="#001E36" />
+      <rect x="1" y="1" width="30" height="30" rx="6" stroke="#31A8FF" strokeWidth="1.5" />
+      <path d="M8.5 10H13.2C15.3 10 16.5 11.2 16.5 13.1C16.5 15 15.3 16.2 13.2 16.2H10.7V22H8.5V10ZM10.7 14.3H12.9C13.8 14.3 14.3 13.8 14.3 13.1C14.3 12.4 13.8 11.9 12.9 11.9H10.7V14.3Z" fill="#31A8FF" />
+      <path d="M17.5 19.8C18.1 20.3 19 20.7 20 20.7C21.1 20.7 21.6 20.2 21.6 19.6C21.6 17.5 17.2 18.5 17.2 15.1C17.2 13.3 18.7 12 20.8 12C21.8 12 22.7 12.3 23.3 12.8L22.5 14.4C22 14.1 21.4 13.8 20.6 13.8C19.7 13.8 19.2 14.2 19.2 14.8C19.2 16.8 23.6 15.8 23.6 19.3C23.6 21.2 22.1 22.4 19.9 22.4C18.6 22.4 17.6 22 16.8 21.3L17.5 19.8Z" fill="#31A8FF" />
+    </svg>
+  )
+}
+
+function CanvaTechLogo() {
+  return (
+    <svg viewBox="0 0 32 32" width="34" height="34" fill="none">
+      <defs>
+        <linearGradient id="canvaLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#00C4CC" />
+          <stop offset="50%" stopColor="#2563EB" />
+          <stop offset="100%" stopColor="#7D2AE8" />
+        </linearGradient>
+      </defs>
+      <circle cx="16" cy="16" r="15" fill="url(#canvaLogoGrad)" />
+      <path d="M21.5 12.5C20.2 10.8 18.2 10 16 10C12.1 10 9 12.8 9 16.8C9 20.6 11.9 23 15.8 23C18.2 23 20.5 21.8 21.8 19.8L20 18.6C19 20 17.5 20.8 15.8 20.8C13.2 20.8 11.2 19 11.2 16.5C11.2 14 13.1 12.2 15.8 12.2C17.4 12.2 18.8 12.8 19.8 14.2L21.5 12.5Z" fill="#FFFFFF" />
+    </svg>
+  )
+}
+
+function UiUxTechLogo() {
+  return (
+    <svg viewBox="0 0 32 32" width="34" height="34" fill="none">
+      <rect width="32" height="32" rx="7" fill="#8B5CF6" fillOpacity="0.12" />
+      <rect x="1" y="1" width="30" height="30" rx="6" stroke="#8B5CF6" strokeWidth="1.2" strokeOpacity="0.3" />
+      <rect x="6" y="6" width="20" height="14" rx="2" stroke="#8B5CF6" strokeWidth="1.8" fill="none" />
+      <line x1="6" y1="10" x2="26" y2="10" stroke="#8B5CF6" strokeWidth="1.4" />
+      <line x1="12" y1="10" x2="12" y2="20" stroke="#8B5CF6" strokeWidth="1.4" />
+      <circle cx="8.5" cy="8" r="0.9" fill="#EC4899" />
+      <circle cx="11" cy="8" r="0.9" fill="#8B5CF6" />
+      <path d="M15 23L18 20L22 24L26 20" stroke="#EC4899" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="22" cy="24" r="1.3" fill="#EC4899" />
+    </svg>
+  )
+}
+
+function MarketingTechLogo() {
+  return (
+    <svg viewBox="0 0 32 32" width="34" height="34" fill="none">
+      <rect width="32" height="32" rx="7" fill="#F59E0B" fillOpacity="0.12" />
+      <rect x="1" y="1" width="30" height="30" rx="6" stroke="#F59E0B" strokeWidth="1.2" strokeOpacity="0.3" />
+      <path d="M7 13V17H10L16 21V9L10 13H7Z" fill="#F59E0B" />
+      <path d="M10 17L11.5 22H13.5L12 17" fill="#F59E0B" />
+      <path d="M19 11C20.5 12.2 21.5 13.9 21.5 16C21.5 18.1 20.5 19.8 19 21" stroke="#EF4444" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M22 8C24.5 9.8 26 12.6 26 16C26 19.4 24.5 22.2 22 24" stroke="#EF4444" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+function SeoTechLogo() {
+  return (
+    <svg viewBox="0 0 32 32" width="34" height="34" fill="none">
+      <rect width="32" height="32" rx="7" fill="#10B981" fillOpacity="0.12" />
+      <rect x="1" y="1" width="30" height="30" rx="6" stroke="#10B981" strokeWidth="1.2" strokeOpacity="0.3" />
+      <circle cx="14" cy="14" r="6" stroke="#10B981" strokeWidth="2" fill="none" />
+      <line x1="18.5" y1="18.5" x2="24" y2="24" stroke="#10B981" strokeWidth="2.2" strokeLinecap="round" />
+      <path d="M11 16V14M14 16V11M17 16V13" stroke="#06B6D4" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M10 10L14 7L18 9" stroke="#10B981" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+// 6 Important Technologies displayed initially in one row
+const initialTechnologies = [
+  { name: 'React', icon: ReactTechLogo },
+  { name: 'Java', icon: JavaTechLogo },
+  { name: 'Spring Boot', icon: SpringBootTechLogo },
+  { name: 'MongoDB', icon: MongoTechLogo },
+  { name: 'Figma', icon: FigmaTechLogo },
+  { name: 'HTML & CSS', icon: HtmlCssTechLogo },
+]
+
+// 6 Additional Technologies revealed via "View More Technologies"
+const moreTechnologies = [
+  { name: 'PHP', icon: PhpTechLogo },
+  { name: 'Photoshop', icon: PhotoshopTechLogo },
+  { name: 'Canva', icon: CanvaTechLogo },
+  { name: 'UI/UX Tools', icon: UiUxTechLogo },
+  { name: 'Digital Marketing Tools', icon: MarketingTechLogo },
+  { name: 'SEO', icon: SeoTechLogo },
+]
+
+// ============================================================================
+// Service Cards Visual Artwork (Images & Bespoke Vector Graphics)
+// ============================================================================
+
+// 04. Graphic & Poster Design: Professional business posters & promotional banners
+function GraphicDesignIllustration() {
+  return (
+    <svg viewBox="0 0 340 185" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="posterMainGrad" x1="0" y1="0" x2="140" y2="180" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#4F46E5" />
+          <stop offset="60%" stopColor="#7C3AED" />
+          <stop offset="100%" stopColor="#EC4899" />
+        </linearGradient>
+        <linearGradient id="posterSubGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#F59E0B" />
+          <stop offset="100%" stopColor="#EF4444" />
+        </linearGradient>
+        <linearGradient id="studioBgGrad" x1="0" y1="0" x2="340" y2="185" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#FAF5FF" />
+          <stop offset="100%" stopColor="#EFF6FF" />
+        </linearGradient>
+      </defs>
+      <rect width="340" height="185" rx="10" fill="url(#studioBgGrad)" />
+
+      {/* Studio Crop Marks & Design Grid Lines */}
+      <line x1="20" y1="20" x2="30" y2="20" stroke="#CBD5E1" strokeWidth="1" />
+      <line x1="20" y1="20" x2="20" y2="30" stroke="#CBD5E1" strokeWidth="1" />
+      <line x1="320" y1="20" x2="310" y2="20" stroke="#CBD5E1" strokeWidth="1" />
+      <line x1="320" y1="20" x2="320" y2="30" stroke="#CBD5E1" strokeWidth="1" />
+
+      {/* Layer 1: Background Secondary Creative Banner (Angled/Offset) */}
+      <g transform="translate(180, 26) rotate(6)" filter="drop-shadow(0 8px 18px rgba(245, 158, 11, 0.15))">
+        <rect width="105" height="135" rx="7" fill="url(#posterSubGrad)" />
+        <rect x="8" y="10" width="89" height="115" rx="4" fill="#FFFFFF" fillOpacity="0.95" />
+        {/* Banner Graphic Elements */}
+        <circle cx="52" cy="46" r="24" fill="#F59E0B" fillOpacity="0.18" />
+        <polygon points="52,28 66,42 52,56 38,42" fill="#EF4444" />
+        <rect x="22" y="78" width="60" height="7" rx="3.5" fill="#0F172A" />
+        <rect x="28" y="88" width="48" height="4" rx="2" fill="#64748B" />
+        <rect x="36" y="98" width="32" height="10" rx="5" fill="#EF4444" />
+        <text x="40" y="105" fontFamily="'Inter', sans-serif" fontSize="6" fontWeight="700" fill="#FFFFFF">50% OFF</text>
+      </g>
+
+      {/* Layer 2: Main Featured Event Poster (Standing Prominent) */}
+      <g transform="translate(68, 18)" filter="drop-shadow(0 14px 28px rgba(79, 70, 229, 0.25))">
+        <rect width="124" height="152" rx="8" fill="url(#posterMainGrad)" />
+
+        {/* Poster Content */}
+        {/* Top Header Tag */}
+        <rect x="12" y="14" width="38" height="6" rx="3" fill="#FFFFFF" fillOpacity="0.25" />
+        <text x="16" y="19" fontFamily="'Inter', sans-serif" fontSize="5" fontWeight="700" fill="#FFFFFF">ANNUAL FORUM</text>
+        <text x="86" y="19" fontFamily="'Inter', sans-serif" fontSize="6" fontWeight="800" fill="#FBCFE8">2026</text>
+
+        {/* Hero Geometric Shape: Intersecting 3D Rings */}
+        <ellipse cx="62" cy="62" rx="32" ry="14" stroke="#FFFFFF" strokeWidth="2.5" fill="none" opacity="0.9" transform="rotate(-25 62 62)" />
+        <ellipse cx="62" cy="62" rx="32" ry="14" stroke="#F472B6" strokeWidth="2.5" fill="none" opacity="0.8" transform="rotate(25 62 62)" />
+        <circle cx="62" cy="62" r="10" fill="#FFFFFF" />
+        <circle cx="62" cy="62" r="5" fill="#7C3AED" />
+
+        {/* Main Poster Typography */}
+        <text x="12" y="96" fontFamily="'Playfair Display', Georgia, serif" fontSize="13" fontWeight="800" fill="#FFFFFF" letterSpacing="0.05em">INNOVATE</text>
+        <text x="12" y="108" fontFamily="'Inter', sans-serif" fontSize="6.5" fontWeight="700" fill="#FBCFE8" letterSpacing="0.1em">DIGITAL SUMMIT</text>
+        <line x1="12" y1="114" x2="112" y2="114" stroke="#FFFFFF" strokeWidth="0.8" opacity="0.4" />
+
+        {/* Date, Venue & Barcode Stamp */}
+        <text x="12" y="124" fontFamily="'Inter', sans-serif" fontSize="5.5" fontWeight="600" fill="#FFFFFF">NOV 24 - 26, 2026</text>
+        <text x="12" y="132" fontFamily="'Inter', sans-serif" fontSize="5" fontWeight="500" fill="#E0E7FF">TECH METROPOLIS</text>
+
+        {/* Mini Barcode */}
+        <g transform="translate(86, 126)">
+          <rect x="0" y="0" width="1.5" height="12" fill="#FFFFFF" />
+          <rect x="3" y="0" width="2.5" height="12" fill="#FFFFFF" />
+          <rect x="7" y="0" width="1" height="12" fill="#FFFFFF" />
+          <rect x="10" y="0" width="3" height="12" fill="#FFFFFF" />
+          <rect x="15" y="0" width="1.5" height="12" fill="#FFFFFF" />
+          <rect x="18" y="0" width="2" height="12" fill="#FFFFFF" />
+        </g>
+      </g>
+
+      {/* Floating Color Swatches Palette Badge */}
+      <g transform="translate(222, 116)" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.1))">
+        <rect width="86" height="34" rx="8" fill="#FFFFFF" stroke="#E2E8F0" strokeWidth="1" />
+        <text x="10" y="14" fontFamily="'Inter', sans-serif" fontSize="6.5" fontWeight="700" fill="#0A1128">Brand Palette</text>
+        <circle cx="16" cy="24" r="5" fill="#2563EB" />
+        <circle cx="30" cy="24" r="5" fill="#7C3AED" />
+        <circle cx="44" cy="24" r="5" fill="#EC4899" />
+        <circle cx="58" cy="24" r="5" fill="#F59E0B" />
+        <circle cx="72" cy="24" r="5" fill="#10B981" />
+      </g>
+    </svg>
+  )
+}
+
+// 05. Video Editing (CapCut): Professional video timeline & preview workstation
+function VideoEditingIllustration() {
+  return (
+    <svg viewBox="0 0 340 185" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="videoBgGrad" x1="0" y1="0" x2="340" y2="185" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#0B132B" />
+          <stop offset="100%" stopColor="#1C2541" />
+        </linearGradient>
+        <linearGradient id="videoFrameGrad" x1="0" y1="0" x2="170" y2="85" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#1D4ED8" />
+          <stop offset="50%" stopColor="#7C3AED" />
+          <stop offset="100%" stopColor="#DB2777" />
+        </linearGradient>
+      </defs>
+      <rect width="340" height="185" rx="10" fill="url(#videoBgGrad)" />
+
+      {/* Top Video Preview & Media Shelf Area */}
+      {/* Left Media Tools Bin */}
+      <rect x="16" y="16" width="60" height="82" rx="6" fill="#151E38" stroke="#253256" strokeWidth="0.8" />
+      <text x="22" y="28" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="700" fill="#64748B">CAPCUT TOOLS</text>
+      <rect x="22" y="34" width="22" height="14" rx="3" fill="#2563EB" />
+      <path d="M30 38L36 41L30 44V38Z" fill="#FFFFFF" />
+      <rect x="48" y="34" width="22" height="14" rx="3" fill="#1E2A4A" />
+      <text x="52" y="44" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="700" fill="#94A3B8">FX</text>
+      <rect x="22" y="52" width="22" height="14" rx="3" fill="#1E2A4A" />
+      <text x="26" y="62" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="700" fill="#94A3B8">✂</text>
+      <rect x="48" y="52" width="22" height="14" rx="3" fill="#1E2A4A" />
+      <text x="52" y="62" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="700" fill="#94A3B8">♫</text>
+      <rect x="22" y="70" width="48" height="18" rx="3" fill="#111A33" />
+      <text x="26" y="81" fontFamily="'Inter', sans-serif" fontSize="6.5" fontWeight="600" fill="#00D8FE">4K HDR 60fps</text>
+
+      {/* Main Video Preview Player Monitor */}
+      <g filter="drop-shadow(0 6px 16px rgba(0,0,0,0.4))">
+        <rect x="84" y="16" width="168" height="82" rx="6" fill="#000000" stroke="#334155" strokeWidth="1" />
+        {/* Simulated Live Video Scene (Cinematic Lighting) */}
+        <rect x="86" y="18" width="164" height="78" rx="4" fill="url(#videoFrameGrad)" />
+        {/* Stage / Cinematic Silhouette */}
+        <circle cx="168" cy="48" r="16" fill="#FFFFFF" fillOpacity="0.25" />
+        <ellipse cx="168" cy="80" rx="34" ry="18" fill="#0A1128" />
+        <circle cx="168" cy="54" r="8" fill="#0A1128" />
+
+        {/* Overlay Playback Controls */}
+        <circle cx="168" cy="54" r="12" fill="#0F172A" fillOpacity="0.7" stroke="#FFFFFF" strokeWidth="1" />
+        <polygon points="166,49 173,54 166,59" fill="#FFFFFF" />
+
+        {/* Timecode Badge */}
+        <rect x="92" y="76" width="48" height="14" rx="3" fill="#000000" fillOpacity="0.65" />
+        <text x="96" y="86" fontFamily="'Inter', monospace" fontSize="7.5" fontWeight="700" fill="#00ED64">00:03:14:22</text>
+      </g>
+
+      {/* Right Inspector Panel */}
+      <rect x="260" y="16" width="64" height="82" rx="6" fill="#151E38" stroke="#253256" strokeWidth="0.8" />
+      <text x="266" y="28" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="700" fill="#64748B">COLOR GRADE</text>
+      <rect x="266" y="34" width="52" height="6" rx="2" fill="#2563EB" />
+      <circle cx="296" cy="37" r="4" fill="#FFFFFF" />
+      <rect x="266" y="46" width="52" height="6" rx="2" fill="#7C3AED" />
+      <circle cx="282" cy="49" r="4" fill="#FFFFFF" />
+      <rect x="266" y="58" width="52" height="6" rx="2" fill="#EC4899" />
+      <circle cx="304" cy="61" r="4" fill="#FFFFFF" />
+      <rect x="266" y="72" width="52" height="16" rx="3" fill="#2563EB" />
+      <text x="274" y="82" fontFamily="'Inter', sans-serif" fontSize="7" fontWeight="700" fill="#FFFFFF">EXPORT 4K</text>
+
+      {/* Bottom Multi-Track Timeline Interface */}
+      <rect x="16" y="106" width="308" height="66" rx="6" fill="#0F172A" stroke="#253256" strokeWidth="1" />
+
+      {/* Time Ruler */}
+      <rect x="16" y="106" width="308" height="12" fill="#151E38" />
+      <line x1="30" y1="118" x2="310" y2="118" stroke="#334155" strokeWidth="0.8" />
+      <text x="40" y="115" fontFamily="'Inter', monospace" fontSize="6" fill="#64748B">00:00</text>
+      <text x="100" y="115" fontFamily="'Inter', monospace" fontSize="6" fill="#64748B">01:00</text>
+      <text x="160" y="115" fontFamily="'Inter', monospace" fontSize="6" fill="#64748B">02:00</text>
+      <text x="220" y="115" fontFamily="'Inter', monospace" fontSize="6" fill="#64748B">03:00</text>
+      <text x="280" y="115" fontFamily="'Inter', monospace" fontSize="6" fill="#64748B">04:00</text>
+
+      {/* Track 1: Video A/V Clips with Transitions */}
+      <rect x="36" y="122" width="56" height="14" rx="3" fill="#2563EB" />
+      <text x="40" y="132" fontFamily="'Inter', sans-serif" fontSize="6.5" fontWeight="600" fill="#FFFFFF">Clip_A.mp4</text>
+      <polygon points="94,129 97,124 100,129 97,134" fill="#00D8FE" />
+      <rect x="102" y="122" width="70" height="14" rx="3" fill="#3B82F6" />
+      <text x="106" y="132" fontFamily="'Inter', sans-serif" fontSize="6.5" fontWeight="600" fill="#FFFFFF">B_Roll_Studio.mov</text>
+      <polygon points="174,129 177,124 180,129 177,134" fill="#00D8FE" />
+      <rect x="182" y="122" width="68" height="14" rx="3" fill="#2563EB" />
+      <text x="186" y="132" fontFamily="'Inter', sans-serif" fontSize="6.5" fontWeight="600" fill="#FFFFFF">Cinematic_4K.mp4</text>
+      <rect x="254" y="122" width="58" height="14" rx="3" fill="#1D4ED8" />
+
+      {/* Track 2: Audio Waveform Track */}
+      <rect x="36" y="139" width="276" height="14" rx="3" fill="#064E3B" />
+      {/* Audio Waveforms */}
+      <g stroke="#10B981" strokeWidth="1.2" strokeLinecap="round">
+        <line x1="42" y1="146" x2="42" y2="146" /> <line x1="46" y1="143" x2="46" y2="149" />
+        <line x1="50" y1="141" x2="50" y2="151" /> <line x1="54" y1="144" x2="54" y2="148" />
+        <line x1="58" y1="140" x2="58" y2="152" /> <line x1="62" y1="143" x2="62" y2="149" />
+        <line x1="66" y1="141" x2="66" y2="151" /> <line x1="70" y1="145" x2="70" y2="147" />
+        <line x1="74" y1="142" x2="74" y2="150" /> <line x1="78" y1="140" x2="78" y2="152" />
+        <line x1="82" y1="144" x2="82" y2="148" /> <line x1="86" y1="141" x2="86" y2="151" />
+        <line x1="90" y1="143" x2="90" y2="149" /> <line x1="94" y1="140" x2="94" y2="152" />
+        <line x1="98" y1="142" x2="98" y2="150" /> <line x1="102" y1="145" x2="102" y2="147" />
+        <line x1="106" y1="141" x2="106" y2="151" /> <line x1="110" y1="139" x2="110" y2="153" />
+        <line x1="114" y1="142" x2="114" y2="150" /> <line x1="118" y1="144" x2="118" y2="148" />
+        <line x1="122" y1="140" x2="122" y2="152" /> <line x1="126" y1="142" x2="126" y2="150" />
+        <line x1="130" y1="145" x2="130" y2="147" /> <line x1="134" y1="141" x2="134" y2="151" />
+        <line x1="138" y1="139" x2="138" y2="153" /> <line x1="142" y1="143" x2="142" y2="149" />
+        <line x1="146" y1="140" x2="146" y2="152" /> <line x1="150" y1="144" x2="150" y2="148" />
+        <line x1="154" y1="142" x2="154" y2="150" /> <line x1="158" y1="141" x2="158" y2="151" />
+        <line x1="162" y1="145" x2="162" y2="147" /> <line x1="166" y1="140" x2="166" y2="152" />
+        <line x1="170" y1="142" x2="170" y2="150" /> <line x1="174" y1="139" x2="174" y2="153" />
+        <line x1="178" y1="143" x2="178" y2="149" /> <line x1="182" y1="141" x2="182" y2="151" />
+        <line x1="186" y1="144" x2="186" y2="148" /> <line x1="190" y1="140" x2="190" y2="152" />
+        <line x1="194" y1="142" x2="194" y2="150" /> <line x1="198" y1="145" x2="198" y2="147" />
+        <line x1="202" y1="141" x2="202" y2="151" /> <line x1="206" y1="139" x2="206" y2="153" />
+        <line x1="210" y1="143" x2="210" y2="149" /> <line x1="214" y1="140" x2="214" y2="152" />
+        <line x1="218" y1="144" x2="218" y2="148" /> <line x1="222" y1="142" x2="222" y2="150" />
+        <line x1="226" y1="141" x2="226" y2="151" /> <line x1="230" y1="145" x2="230" y2="147" />
+        <line x1="234" y1="140" x2="234" y2="152" /> <line x1="238" y1="142" x2="238" y2="150" />
+        <line x1="242" y1="139" x2="242" y2="153" /> <line x1="246" y1="143" x2="246" y2="149" />
+        <line x1="250" y1="141" x2="250" y2="151" /> <line x1="254" y1="144" x2="254" y2="148" />
+        <line x1="258" y1="140" x2="258" y2="152" /> <line x1="262" y1="142" x2="262" y2="150" />
+        <line x1="266" y1="145" x2="266" y2="147" /> <line x1="270" y1="141" x2="270" y2="151" />
+        <line x1="274" y1="139" x2="274" y2="153" /> <line x1="278" y1="143" x2="278" y2="149" />
+        <line x1="282" y1="140" x2="282" y2="152" /> <line x1="286" y1="144" x2="286" y2="148" />
+        <line x1="290" y1="142" x2="290" y2="150" /> <line x1="294" y1="141" x2="294" y2="151" />
+        <line x1="298" y1="145" x2="298" y2="147" /> <line x1="302" y1="140" x2="302" y2="152" />
+      </g>
+
+      {/* Track 3: Subtitles / Dynamic Captions */}
+      <rect x="52" y="156" width="46" height="8" rx="2" fill="#D97706" fillOpacity="0.85" />
+      <rect x="110" y="156" width="58" height="8" rx="2" fill="#D97706" fillOpacity="0.85" />
+      <rect x="180" y="156" width="50" height="8" rx="2" fill="#D97706" fillOpacity="0.85" />
+      <rect x="242" y="156" width="60" height="8" rx="2" fill="#D97706" fillOpacity="0.85" />
+
+      {/* Vertical Red Playhead Needle */}
+      <line x1="168" y1="106" x2="168" y2="172" stroke="#EF4444" strokeWidth="1.8" />
+      <polygon points="164,106 172,106 168,112" fill="#EF4444" />
+    </svg>
+  )
+}
+
+// 5 Services Data for Section 04
+const servicesData = [
+  {
+    number: '01',
+    title: 'Website Development',
+    description:
+      'I create modern, responsive and user-friendly websites tailored to business requirements. From professional business websites to dynamic web applications, I focus on clean design, performance, SEO and seamless user experiences across all devices.',
+    image: websiteDevImg,
+  },
+  {
+    number: '02',
+    title: 'Custom ERP Solutions',
+    description:
+      'I develop customized ERP solutions designed to simplify business operations and improve productivity. From management dashboards to database-driven workflows, I focus on building structured, reliable and scalable business applications.',
+    image: erpSolutionImg,
+  },
+  {
+    number: '03',
+    title: 'UI/UX Design',
+    description:
+      'I design intuitive and visually appealing digital interfaces that make applications easy to understand and use. Using Figma, I create wireframes, prototypes and structured layouts with a strong focus on usability and consistency.',
+    image: figmaUiUxImg,
+  },
+  {
+    number: '04',
+    title: 'Graphic & Poster Design',
+    description:
+      'I create attractive and professional graphic designs for businesses and digital brands. From promotional posters to social media creatives, I focus on visual consistency, creative layouts and effective brand communication.',
+    illustration: GraphicDesignIllustration,
+  },
+  {
+    number: '05',
+    title: 'Video Editing (CapCut)',
+    description:
+      'I create engaging and visually appealing videos for digital platforms using CapCut. From promotional videos to social media reels, I focus on clean transitions, attractive visuals, timing and storytelling.',
+    illustration: VideoEditingIllustration,
+  },
+]
+
 
 // 4 Tabs Data for the About Section
 const aboutTabsData = [
@@ -163,6 +616,7 @@ const aboutTabsData = [
 
 export default function App() {
   const [activeTabId, setActiveTabId] = useState('fullstack')
+  const [showAllTech, setShowAllTech] = useState(false)
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -267,6 +721,172 @@ export default function App() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ==================================================================
+            Technology Expertise Section – Premium Horizontal Layout
+            ================================================================== */}
+        <section id="skills" className="technology-section">
+          <div className="technology-container">
+            {/* 1. Section Header – Single Row */}
+            <div className="technology-header">
+              <div className="technology-heading">
+                <span className="technology-label">MY TECHNICAL EXPERTISE</span>
+                <h2 className="technology-title">Technologies I Work With</h2>
+              </div>
+              <div className="technology-actions">
+                <p className="technology-tagline">Tools that power my digital solutions.</p>
+                <button
+                  type="button"
+                  onClick={() => setShowAllTech((prev) => !prev)}
+                  className="technology-more-btn"
+                  aria-expanded={showAllTech}
+                >
+                  <span>{showAllTech ? 'Show Less' : 'View More Technologies'}</span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="15"
+                    height="15"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`technology-btn-icon ${showAllTech ? 'rotated' : ''}`}
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            {/* 2. Initial Row – Exactly Six Important Technologies */}
+            <div className="technology-grid">
+              {initialTechnologies.map((tech) => {
+                const IconComponent = tech.icon
+                return (
+                  <div key={tech.name} className="technology-card">
+                    <div className="technology-icon">
+                      <IconComponent />
+                    </div>
+                    <span className="technology-name">{tech.name}</span>
+                  </div>
+                )
+              })}
+            </div>
+
+            {/* 3. Expanded Technologies Grid – Revealed On Click */}
+            {showAllTech && (
+              <div className="technology-expanded">
+                {moreTechnologies.map((tech) => {
+                  const IconComponent = tech.icon
+                  return (
+                    <div key={tech.name} className="technology-card">
+                      <div className="technology-icon">
+                        <IconComponent />
+                      </div>
+                      <span className="technology-name">{tech.name}</span>
+                    </div>
+                  )
+                })}
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* ==================================================================
+            Section 04 – Services & Digital Solutions
+            Placed immediately after the Technology Expertise section
+            ================================================================== */}
+        <section id="services" className="services-section">
+          <div className="services-container">
+            {/* 1. Section Header and Tagline */}
+            <div className="services-header">
+              <span className="services-label">WHAT I OFFER</span>
+              <h2 className="services-title">Services & Digital Solutions</h2>
+              <div className="services-accent-line">
+                <span className="services-line" />
+                <span className="services-dot" />
+                <span className="services-line" />
+              </div>
+              <p className="services-tagline">
+                Transforming ideas into powerful digital experiences through technology, creativity and thoughtful design.
+              </p>
+            </div>
+          </div>
+
+          {/* 2. Continuous Right-to-Left Sliding Marquee Track */}
+          <div className="services-slider" aria-label="Services showcase">
+            <div className="services-track">
+              {/* Primary Sequence of 5 Service Cards */}
+              <div className="services-group">
+                {servicesData.map((service, index) => {
+                  const Illustration = service.illustration
+                  return (
+                    <div key={`srv-1-${index}`} className="service-card">
+                      <div className="service-image">
+                        {service.image ? (
+                          <img
+                            src={service.image}
+                            alt={service.title}
+                            className="service-img"
+                            loading="lazy"
+                          />
+                        ) : Illustration ? (
+                          <Illustration />
+                        ) : null}
+                      </div>
+                      <div className="service-content">
+                        <div className="service-card-top">
+                          <span className="service-number">{service.number}</span>
+                        </div>
+                        <h3 className="service-title">{service.title}</h3>
+                        <p className="service-description">{service.description}</p>
+                      </div>
+                      <a href="#contact" className="service-link">
+                        <span>Explore Service</span>
+                        <ArrowRight size={15} />
+                      </a>
+                    </div>
+                  )
+                })}
+              </div>
+
+              {/* Duplicated Sequence for Continuous Seamless Loop */}
+              <div className="services-group" aria-hidden="true">
+                {servicesData.map((service, index) => {
+                  const Illustration = service.illustration
+                  return (
+                    <div key={`srv-2-${index}`} className="service-card">
+                      <div className="service-image">
+                        {service.image ? (
+                          <img
+                            src={service.image}
+                            alt={service.title}
+                            className="service-img"
+                            loading="lazy"
+                          />
+                        ) : Illustration ? (
+                          <Illustration />
+                        ) : null}
+                      </div>
+                      <div className="service-content">
+                        <div className="service-card-top">
+                          <span className="service-number">{service.number}</span>
+                        </div>
+                        <h3 className="service-title">{service.title}</h3>
+                        <p className="service-description">{service.description}</p>
+                      </div>
+                      <a href="#contact" className="service-link" tabIndex={-1}>
+                        <span>Explore Service</span>
+                        <ArrowRight size={15} />
+                      </a>
+                    </div>
+                  )
+                })}
               </div>
             </div>
           </div>

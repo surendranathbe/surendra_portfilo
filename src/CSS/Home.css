@@ -1228,3 +1228,598 @@
     font-size: 12.5px;
   }
 }
+
+/* ==========================================================================
+   Technology Expertise Section – Premium Horizontal Layout
+   Theme: White BG, Royal Blue Accents, Soft Lavender Highlights, Navy Typography
+   ========================================================================== */
+.technology-section {
+  padding: 42px 0 48px;
+  background-color: #FFFFFF;
+  position: relative;
+  border-top: 1px solid #F0F1F5;
+  scroll-margin-top: 80px;
+}
+
+.technology-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 1. Section Header – Single Row Layout */
+.technology-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 24px;
+}
+
+.technology-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.technology-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #2563EB;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+.technology-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #0A1128;
+  letter-spacing: -0.015em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.technology-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.technology-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #64748B;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.technology-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #EFF6FF;
+  border: 1.5px solid #BFDBFE;
+  border-radius: 9px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1D4ED8;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.technology-more-btn:hover {
+  background-color: #2563EB;
+  color: #FFFFFF;
+  border-color: #2563EB;
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.22);
+}
+
+.technology-btn-icon {
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.technology-more-btn:hover .technology-btn-icon {
+  transform: translateX(3px);
+}
+
+.technology-btn-icon.rotated {
+  transform: rotate(-90deg);
+}
+
+.technology-more-btn:hover .technology-btn-icon.rotated {
+  transform: rotate(-90deg) translateY(-2px);
+}
+
+/* 2. Grid & Cards – Side-by-side 6 Equal Columns on Desktop */
+.technology-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.technology-expanded {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  width: 100%;
+  margin-top: 16px;
+  animation: techFadeIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes techFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.technology-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 18px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 110px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.02);
+  cursor: default;
+}
+
+.technology-card:hover {
+  transform: translateY(-3px);
+  border-color: #93C5FD;
+  box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.1);
+  background-color: #FAF5FF; /* Soft lavender highlight */
+}
+
+.technology-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.technology-card:hover .technology-icon {
+  transform: scale(1.08);
+}
+
+.technology-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #0F172A;
+  text-align: center;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.technology-card:hover .technology-name {
+  color: #1D4ED8;
+}
+
+/* 3. Responsive Breakpoints */
+@media (max-width: 1100px) {
+  .technology-grid,
+  .technology-expanded {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .technology-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .technology-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 640px) {
+  .technology-section {
+    padding: 32px 0 38px;
+  }
+
+  .technology-container {
+    padding: 0 16px;
+  }
+
+  .technology-title {
+    font-size: 24px;
+  }
+
+  .technology-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .technology-tagline {
+    font-size: 13px;
+  }
+
+  .technology-more-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px;
+  }
+
+  .technology-grid,
+  .technology-expanded {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .technology-card {
+    padding: 14px 10px;
+    min-height: 98px;
+  }
+
+  .technology-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .technology-name {
+    font-size: 12.5px;
+  }
+}
+
+/* ==========================================================================
+   Section 04 – Services & Digital Solutions
+   Continuous Right-to-Left Infinite Sliding Marquee
+   Theme: White & Light Lavender BG, Royal Blue Accents, Navy Typography
+   ========================================================================== */
+.services-section {
+  padding: 55px 0 65px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF5FF 45%, #F5F3FF 100%);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #F0F1F5;
+  scroll-margin-top: 80px;
+}
+
+.services-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 1. Header & Tagline */
+.services-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.services-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #2563EB;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.services-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #0A1128;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+}
+
+.services-accent-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 auto 14px;
+}
+
+.services-line {
+  width: 32px;
+  height: 3px;
+  background: linear-gradient(90deg, #2563EB, #7C3AED);
+  border-radius: 3px;
+}
+
+.services-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #2563EB;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
+}
+
+.services-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #64748B;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* 2. Continuous Horizontal Marquee Slider */
+.services-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 12px 0 24px;
+}
+
+/* Edge Fade Gradients for a Soft Infinite Look */
+.services-slider::before,
+.services-slider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.services-slider::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95), transparent);
+}
+
+.services-slider::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(245, 243, 255, 0.95), transparent);
+}
+
+.services-track {
+  display: flex;
+  width: max-content;
+  animation: slideRightToLeft 38s linear infinite;
+}
+
+.services-group {
+  display: flex;
+  gap: 26px;
+  padding-right: 26px;
+  flex-shrink: 0;
+}
+
+/* Pause On Hover */
+.services-slider:hover .services-track,
+.services-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slideRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .services-slider::before,
+  .services-slider::after {
+    display: none;
+  }
+  .services-track {
+    animation: none;
+    overflow-x: auto;
+    width: 100%;
+    padding: 10px 20px;
+  }
+}
+
+/* 3. Service Card Styling */
+.service-card {
+  width: 370px;
+  background-color: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: #93C5FD;
+  box-shadow: 0 16px 36px -6px rgba(37, 99, 235, 0.12);
+}
+
+.service-image {
+  width: 100%;
+  height: 185px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #F8FAFC;
+  border: 1px solid #F1F5F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.service-image svg,
+.service-image img,
+.service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card:hover .service-image svg,
+.service-card:hover .service-image img,
+.service-card:hover .service-img {
+  transform: scale(1.05);
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.service-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.service-number {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2563EB;
+  background-color: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 3px 11px;
+  border-radius: 50px;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+.service-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #0A1128;
+  letter-spacing: -0.015em;
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.service-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.62;
+  color: #64748B;
+  margin: 0 0 18px 0;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #2563EB;
+  text-decoration: none;
+  padding-top: 14px;
+  border-top: 1px solid #F1F5F9;
+  transition: all 0.25s ease;
+  width: fit-content;
+}
+
+.service-link svg {
+  transition: transform 0.25s ease;
+}
+
+.service-card:hover .service-link {
+  color: #1D4ED8;
+}
+
+.service-card:hover .service-link svg {
+  transform: translateX(5px);
+}
+
+/* 4. Responsive Breakpoints */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 42px 0 50px;
+  }
+
+  .services-title {
+    font-size: 27px;
+  }
+
+  .services-tagline {
+    font-size: 14px;
+  }
+
+  .service-card {
+    width: 320px;
+    padding: 18px;
+  }
+
+  .service-image {
+    height: 165px;
+  }
+
+  .service-title {
+    font-size: 19px;
+  }
+
+  .service-description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    width: 290px;
+    padding: 16px;
+  }
+
+  .service-image {
+    height: 150px;
+  }
+
+  .services-slider::before,
+  .services-slider::after {
+    width: 40px;
+  }
+}
+
+
+
