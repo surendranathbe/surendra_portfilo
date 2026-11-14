@@ -9,7 +9,6 @@ import {
   ArrowRight,
   ChevronLeft,
   RotateCw,
-  ExternalLink,
   Sparkles,
   ArrowUpRight,
 } from 'lucide-react'
@@ -906,6 +905,8 @@ const aboutTabsData = [
   },
 ]
 
+const currentYear = new Date().getFullYear()
+
 export default function App() {
   const [activeTabId, setActiveTabId] = useState('fullstack')
   const [showAllTech, setShowAllTech] = useState(false)
@@ -1562,7 +1563,7 @@ export default function App() {
         <div className="footerBottomBar">
           <div className="footerBottomContainer">
             <p className="footerCopyright">
-              © {new Date().getFullYear()} Bezawada Surendra Nath. All rights reserved.
+              © {currentYear} Bezawada Surendra Nath. All rights reserved.
             </p>
             <button
               type="button"

@@ -45,18 +45,18 @@ function BSLogo({ className }) {
   )
 }
 
+const navLinks = [
+  { name: 'Home', href: '#home', id: 'home' },
+  { name: 'About', href: '#about', id: 'about' },
+  { name: 'Projects', href: '#projects', id: 'projects' },
+  { name: 'Services', href: '#services', id: 'services' },
+  { name: 'Contact', href: '#contact', id: 'contact' },
+]
+
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
-
-  const navLinks = [
-    { name: 'Home', href: '#home', id: 'home' },
-    { name: 'About', href: '#about', id: 'about' },
-    { name: 'Projects', href: '#projects', id: 'projects' },
-    { name: 'Services', href: '#services', id: 'services' },
-    { name: 'Contact', href: '#contact', id: 'contact' },
-  ]
 
   // Detect scroll to add slight shadow when scrolling
   useEffect(() => {

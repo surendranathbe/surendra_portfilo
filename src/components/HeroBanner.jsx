@@ -102,14 +102,14 @@ function HexagonCard({ children, className = '', isDecor = false, title = '' }) 
   )
 }
 
-export default function HeroBanner() {
-  const typingRoles = [
-    'Full Stack Developer',
-    'UI/UX Developer',
-    'Website Developer',
-    'Software Developer',
-  ]
+const typingRoles = [
+  'Full Stack Developer',
+  'UI/UX Developer',
+  'Website Developer',
+  'Software Developer',
+]
 
+export default function HeroBanner() {
   const [roleIndex, setRoleIndex] = useState(0)
   const [displayedText, setDisplayedText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
